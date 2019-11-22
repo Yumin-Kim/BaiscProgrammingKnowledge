@@ -176,18 +176,6 @@ router.post('/subpage/',(req,res,next)=>{
 module.exports = router;
 ///// 사용자가 추가한 라우팅
                 
-const NodeRouter = require('./Node/Node'); 
-router.use('/Node', NodeRouter);
-                
-const MySqlRouter = require('./MySql/MySql'); 
-router.use('/MySql', MySqlRouter);
-                
-const JavaRouter = require('./Java/Java'); 
-router.use('/Java', JavaRouter);
-                
 const GitRouter = require('./Git/Git'); 
 router.use('/Git', GitRouter);
-                
-const 준비중Router = require('./준비중/준비중'); 
-router.use('/준비중', 준비중Router);
                 
