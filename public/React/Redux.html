@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Redux 정리</title>
+</head>
+<body>
+    <h1> <a href="/react">Redux 정리</a></h1>
+    <p>
+        상태 관리 용이
+    </p>
+    <ul>
+        <p>불변성 유지하여야 Redux가 인식</p>
+        <b>캐싱의 자유를 Redux로 구현 할 수 있음 </b>
+        <li>React 종속 된것이 아니며 잘어울리기 때문에 사용 </li>
+        <li> Redux 안에는 state가 존재하고 이 묶음을 store라고 칭한다 </li>
+        <li> 이 다음 action(하나의 객체임!!)이 있는데 말그대로 하나의 동작을 정할 수 있게끔 도와준다 >> 미리 만들어 두는것을 추천!! </li>
+        <li> 이 action을 실행하는것을 dispatch 라고 한다 >> 함수임 </li>
+        <li> dispatch( 실행하게 되면 )도중에 reducer에서 새로운 객체를 만들어 지고 store에 있는 state들이 reducer 만들어진 새로운 객체가 대체된다  </li>
+        <li> dispatch 와 reducer 사이에 middleware가 존재 함!! </li>
+        <li> store.subscribe() 사용하여 화면을 바꾸는데 React는 기본 내장 </li>
+        <li>Redux + saga >> 사용 시기는 점더 비동기 처리로 인한 데이터( 상태 ) 관리시 saga에 모두 모아 둔다 </li>
+        <textarea name="" id="" cols="30" rows="10">
+                const { createStore } = require('redux');
+                // Redux Data store
+                const reducer = (prevState,action) =>{
+                    switch ( action.type ){
+                        case 'LOG_IN' :
+                            return{
+                                ...prevState,
+                                user:action.data
+                            }
+                        case 'LOG_OUT':
+                            return{
+                                ...prevState,
+                                user:null,
+                            }    
+                        case 'ADD_POSTS':{
+                            return{
+                                ...prevState,
+                                posts:[ ...prevState.posts,action.data ]
+                            }
+                        }    
+                        default:
+                             return prevState;    
+                    }
+                };
+                const initialState = {
+                    user:null,
+                    posts:[],
+                };
+                const store = createStore(reducer,initialState);
+                const login = (data) =>{
+                    return {
+                        type:'LOG_IN',
+                        data,
+                    }
+                }
+                const logout = () =>{
+                    return {
+                        type:'LOG_OUT',
+                    }
+                }
+                const addPosts = (data) =>{
+                    return {
+                        type:'ADD_POSTS',
+                        data,
+                    }
+                }
+                // React View
+                store.dispatch(login({
+                    id:1,
+                    name:'dbals',
+                    admin:true,
+                }))
+                console.log('1st' , store.getState() );
+                store.dispatch(addPosts({
+                        userId:1,
+                        id:1,
+                        content:'Hello Redux'
+                }))
+                console.log('2nd' , store.getState() );
+                store.dispatch(addPosts({
+                    userId:1,
+                    id:2,
+                    content:'Hello Redux + React'
+                }))
+                console.log( '3rd' , store.getState() );
+                store.dispatch(logout());
+                console.log( ' 4th ' , store.getState() );
+        </textarea>
+        <li>컴포넌트 내부에서 데이터/상태 관리시 Redux 사용보다는 state 사용하기 >> 부모자식간 state관리는 state로 ////고조와 손자간의 관계에서는 복잡하기 때문에 Redux 활용  </li>
+        <li>Redux는  큰프로젝트 할때 사용 </li>
+        <li>Redux 파일 구조 모델링 시 카테고리별 데이터에 따라 파일을 만든다</li>
+    </ul>
+
+
+    <h2>MobX 정리 </h2>
+</body>
+</html>

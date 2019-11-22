@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Git</title>
+    <script src="../js/ajax.js" ></script>
+</head>
+<body>
+    <h1><a href="/">Git</a></h1>
+    <h2> Git정리 </h2> 
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+        <p>
+        Sub Category : <input type="text" placeholder="title" name="subcategory"  >
+        </p>
+        <p>
+        Sub Description : <input type="text" placeholder="description" name="subdescription" >
+        </p>
+        <p>
+            <input type="submit" >
+        </p>
+    </form>
+    <ul class="subCategory">
+    </ul>
+
+    <ol>
+        <li>Git을 설치한다>> 구글링 후에 git을 설치하고 해당하는 GUI를 설치 한다 </li>
+        <li>GUI중에 sourcetree를 다운바고 해당하는 파일에 git init을 명령 프롬프트에 입력한다</li>
+        <li>해당하는 파일에 .git이라는 파일이 생성되고 그 파일은 git init으로 생성되었으면 지우게되면 git에 기억하고 있는 파일이 모두 지워지게 된다  </li>
+        <li>
+            <h3>10 가지 명령어</h3>
+            <h3>
+                <p>
+                    파일 CRUD후에 단계( 개인정보 입력 하지 않으면 commit 에러 )
+                </p>
+                GIT 업로드 : status 확인하고 add 해야하는 부분하고 commit 후에 GIT-url 입력후 remote 에 push하면 끝!!
+            </h3>
+            <ol>
+                <li><b>git status</b>현재 파일 상태를 확인할수 있는 명렴어 이다</li>
+                <li><b>git add</b>현재 파일을 업로드 할 준비를 시켜두는 것이다 >> 현재 파일에서 한번에 모든 파일을 업로드 하고 싶을때 git add . 이런식으로 하면 한번에 업로드!! </li>
+                <li><b>.gitignore</b> 한번에 업로드 하기 전에  자신의 파일에서 보안적으로 git읜 관리를 받으면 안될것들을 기록하고 status할시 .gitignore에서는 보여지지 않는다 >>주의 꼭 올리기전에 사용해야한다 >> 올리고 난뒤에 하면 아무런 의미가 없다 </li>
+                <li>
+                    <h3>commit message는 자세히 적을 필요 있음 </h3>
+                    <p><b>git commit</b> git 한테 지금 현재 상태를 기억하고 제목을 표시하여 효율적으로 관리 할 수 있게 도와줌 >> 제목입력후 esc 누르고 :wq 해야함</p>
+                    <p> <b>git commit -m "원하는 제목입력" </b> 위와 같은 명령어를 보다 조금 쉽게 사용하는 방법 </p>
+                    <p><b>git log</b>>> git commit의 항목 확인</p>
+                    <p><b>git shortlog</b>>> git commit의 항목 메모한 내용만 확인가능</p>
+                    <p style="font-weight: 700;">
+                        git commit 을 하기전 사용자 등록을 해야한다(commit후에 고유한 id를 받게 됨) 
+                        <ol>
+                            <li>
+                                git config --global user.email "내 이메일"
+                            </li>
+                            <li>
+                                git config --global user.name "이름"
+                            </li>
+                        </ol>
+                    </p>
+                   <p>
+                       파일 수정후 git commit,add를 같이 할수 있음 >>> git commit -am "제목입력" 
+                   </p> 
+                </li>    
+                <li>
+                    <b>git remote add origin url(깃허브 주소 입력)</b>
+                     원격으로 깃허브 주소를 사용하겠다
+                     <b>git remote get-url origin </b>
+                     원격으로 어떤 주소에 접속했는지 확인 가능
+                </li>
+                <li>
+                    <b>git push origin master</b>                    
+                    일단은 origin master을 사용 하지만 의미는 나중에 생각!!
+                </li>
+                <li>
+                    <b>git pull origin master </b>
+                    협업자가 나의 프로 젝트를 수정했을경우 git pull 사용!!
+                </li>
+                <b>commit 단계 기존커밋(hard) >> 빨간색(mixed)관리 하지 않는 상태 >> 초록색(soft)관리 상태 >> 새커밋 </b>
+                <li>
+                    <b>git commit HEAD~숫자입력(뒤로갈) >> push 후 git revert HEAD~숫자입력(뒤로 넘어갈 수) >> git에 revert라고 표시하여 협업자가 인식할 수 있도록 </b>
+                    실수롤 commit했을 경우 사용하는데 기본 값은 mixed 그다음 상태를 원하면 숫자 입력 후 -단계 입력!! 
+                </li>
+                <li>
+                    <b>
+                        master는 고객들이 보는 것이라고 치면 따로 개발자들은 master에서 가지 치기를 하는건처럼 자신의 몫을 빼서 개발하는것을 brench하면 개발및 test후에 master로 합치게 된다
+                    </b>
+                    <ul>
+                        <li>
+                            <b>
+                                git branch 이름(보통 development) 
+                            </b>
+                            입력하면 위에서 설명한거 처럼 branch생성
+                        </li>
+                        <li>
+                            <b>git branch</b>
+                            입력된 branch 확인및 master확인가능
+                        </li>
+                        <li>
+                            <b>git checkout 바꿀 명branch 입력  </b>
+                            branch를 변경 할 수 있다 
+                        </li>
+                    </ul>                        
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+    
+</body>
+</html>
