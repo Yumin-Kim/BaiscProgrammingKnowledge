@@ -179,3 +179,15 @@ module.exports = router;
 const GitRouter = require('./Git/Git'); 
 router.use('/Git', GitRouter);
                 
+const LinuxRouter = require('./Linux/Linux'); 
+router.use('/Linux', LinuxRouter);
+                
+const MysqlRouter = require('./Mysql/Mysql'); 
+router.use('/Mysql', MysqlRouter);
+                
+const computerRouter = require('./computer/computer'); 
+router.use('/computer', computerRouter);
+                
+const cLanguageRouter = require('./cLanguage/cLanguage'); 
+router.use('/cLanguage', cLanguageRouter);
+                

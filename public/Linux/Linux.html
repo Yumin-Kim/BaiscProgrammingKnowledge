@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linux</title>
+    <script src="../js/ajax.js" ></script>
+</head>
+<body>
+    <h1><a href="/">Linux</a></h1>
+    <h2> Linux정리 </h2> 
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+        <p>
+        Sub Category : <input type="text" placeholder="title" name="subcategory"  >
+        </p>
+        <p>
+        Sub Description : <input type="text" placeholder="description" name="subdescription" >
+        </p>
+        <p>
+            <input type="submit" >
+        </p>
+    </form>
+    <ul class="subCategory">
+    </ul>
+    <ul>
+        <li>
+            <h2>UNIX 특징</h2>
+            <ul>
+                <li>다중 사용 시스템</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Shell Vs kernel</h2>
+            명령어를 shell(bash,zsh >> 명령어를 입력하여 해석해주는 프로그램)에게 입력후 커널을 통해 명령어에 대한 결과 값을 다시 쉘에세 알려준다 
+        </li>
+        <li>
+            <h2>리눅스 간단한 명령어 정리</h2>
+            <ol>
+                <li>
+                    <b>ls</b>현재 폴더에서 어떤 폴더,파일이 있는지 확인 할 수 있다. <b>ls -l</b> 상세한 정보를 얻고 싶을때 사용
+                </li>
+                <li>
+                    <b>pwd</b>현재 폴더가 어디에 위치하는지 알수있음 Node.js에서 Pathname과 같음
+                </li>
+                <li>
+                    <b>--help</b>기본 명령어를 사용하고 상세한 명령어를 사용하고 싶을때 사용하고 예를 들어 ls --help처럼 사용하게 되면 ls에 대한 정보를 얻을수 있다 
+                </li>
+                <li>
+                    <b>mkdir</b>폴더를 만들때 사용하며 예를 들어 mkdir 디렉토리이름 이렇게 입력하게 되면 디렉토리 생성 
+                </li>
+                <li>
+                    <b>cp</b>파일을 카피할때 사용하며 예를 들어 cp 파일이름 원하는폴더위치 >>> cp hello.txt dir1/dir2
+                </li>
+                <li>
+                    <b>touch</b>파일 생성할때 사용하며 예를 들어 touch hello.txt
+                </li>
+                <li>
+                    <b>sudo</b>UNIX계열의 특징으로 다중 사용자 시스템으로 관계없는 사람도 프로그램을 할수있다고 생각해서 sudo(super user do)라는 명령어를 만들어 관리자 모두를 따로 만들었다 
+                </li>
+                <li>
+                    <h3>nano</h3>windows 안에서는 메모장과 같은 역할이며 파일 편집기 기능을 가짐짐
+                </li>
+                <li>
+                    <h3>apt</h3>                    
+                    apt라는 package manager를 사용하여 내장되어 있는 package manager제외하고 더 많은 것들 쓸수 있게 도와줌
+                    <p>중점!! : Permission denied 으로 관리자가 아니면 접근을 막아 두기 때문에 sudo를 사용해야 한다</p>
+                    <ol>
+                        <li>
+                            <b>apt-get update</b>
+                            최신 상태 소프트웨어의 목록을 다운로드 받음 
+                        </li>
+                        <li>
+                            <b>apt-get install 원허는이름(ex)apache) </b>
+                            원하는 프로그램,서버 등등을 다운받는것
+                        </li>
+                        <li>
+                            <b>apt-get upgrade 원하는이름 </b>
+                            원하는 프로그램,서버 등등을 업그레이드 하는것
+                        </li>
+                        <li>
+                            <b>apt-get remove 원하는이름 </b>
+                            원하는 프로그램,서버 등등을 삭제 할수 있음
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <b>wget</b>
+                    뒤에 이미지 주소 복붙할 시 이미지 다운 가능 (굳이 이미지가 아니여도 됨)
+                </li>
+                <li>
+                    <b>cat</b>
+                    뒤에 파일 명을 추가 적으면 그 파일에 내용을 확인 할 수 있다
+                </li>
+                <li>
+                    <b>grep</b>
+                    grep 뒤에 원하는 단어를 입력하면 단어가 포함된 행의 정보를 쉽게 볼 수 있다
+                </li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>
