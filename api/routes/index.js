@@ -191,3 +191,6 @@ router.use('/computer', computerRouter);
 const cLanguageRouter = require('./cLanguage/cLanguage'); 
 router.use('/cLanguage', cLanguageRouter);
                 
+const javaRouter = require('./java/java'); 
+router.use('/java', javaRouter);
+                

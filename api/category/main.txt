@@ -1,1 +1,1 @@
-Git,Git정리,Linux,Linux정리,Mysql,Mysql 정리,computer,컴퓨터상식/용어정리,cLanguage,C언어입문,
+Git,Git정리,Linux,Linux정리,Mysql,Mysql 정리,computer,컴퓨터상식/용어정리,cLanguage,C언어입문,java,java시작,

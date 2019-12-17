@@ -8,4 +8,8 @@
     })
 
     module.exports = router;
-    
+
+    const CconceptRouter = require('./Cconcept');
+    router.use('/Cconcept',CconceptRouter)
+    const ccompileRouter = require('./ccompile');
+    router.use('/ccompile',ccompileRouter)

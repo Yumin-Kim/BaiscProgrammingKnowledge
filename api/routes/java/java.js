@@ -4,10 +4,8 @@
     const path = require('path');
 
     router.get('/',(req,res,next)=>{
-    res.sendfile(path.join(__dirname+'../../../../public/computer/computer.html'))
+    res.sendfile(path.join(__dirname+'../../../../public/java/java.html'))
     })
 
     module.exports = router;
     
-    const hardwareRouter = require('./hardware');
-    router.use('/hardware',hardwareRouter)
