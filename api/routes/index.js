@@ -1,15 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const db = require('../db');
 const fs = require('fs');
 const url = require('url');
 
-const mainRouter = require('./user/main');
-const joinRouter = require('./user/join');
-const signRouter = require('./user/sign');
-const updateRouter = require('./user/update');
-const reactRouter = require('./react/react');
 
 const session = require('express-session');
 const passport = require('passport');
@@ -78,49 +72,7 @@ router.use('/${title}', ${title}Router);
     }
 })
 
-router.use('/main', mainRouter);
-router.use('/join', joinRouter);
-router.use('/sign', signRouter);
-router.use('/update', updateRouter);
-router.use('/react', reactRouter);
 
-passport.serializeUser(function (user, done) {
-    console.log('serializeUser')
-    done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-    db.query('select * from nodejsusers where id=?', [id], (err, row) => {
-        done(err, row[0]);
-    })
-});
-
-passport.use('local', new LocalStrategy({
-    usernameField: 'email',
-    passwordField: 'password',
-    passReqToCallback: true,
-}, (req, email, password, done) => {
-    db.query('select * from nodejsusers where email=?', [email], (err, rows) => {
-        if (err) throw err;
-        if (rows[0]) {
-            if (rows[0].email === email) {
-                if (rows[0].pw === password) {
-                    console.log('찾음')
-                    return done(null, rows[0]);
-                } else {
-                    console.log('pw identify')
-                    return done(null, false, { message: 'pw를 확인해주세요' })
-                }
-            } else {
-                console.log('email identify');
-                return done(null, false, { message: 'pw를 확인해주세요' })
-            }
-        } else {
-            console.log('please join');
-            return done(null, false, { message: '회원가입이 필요합니다' })
-        }
-    })
-}))
 
 router.post('/subpage/',(req,res,next)=>{
     const { url } = req.body;

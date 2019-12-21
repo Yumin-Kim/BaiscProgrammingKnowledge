@@ -6,7 +6,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 const flash = require('connect-flash');
 const FileStore = require('session-file-store')(session);
-const db = require('./api/db');
+
 const app = express();
 
 app.use(morgan('dev'));
