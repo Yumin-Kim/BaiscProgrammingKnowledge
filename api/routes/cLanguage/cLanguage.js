@@ -13,3 +13,9 @@
     router.use('/Cconcept',CconceptRouter)
     const ccompileRouter = require('./ccompile');
     router.use('/ccompile',ccompileRouter)
+    const pointerRouter = require('./pointer');
+    router.use('/pointer',pointerRouter)
+    const typedefRouter = require('./typedef');
+    router.use('/typedef',typedefRouter)
+    const clangcontextRouter = require('./clangcontext');
+    router.use('/clangcontext',clangcontextRouter)
