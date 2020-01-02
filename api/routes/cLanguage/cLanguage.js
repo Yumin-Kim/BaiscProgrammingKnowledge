@@ -19,3 +19,5 @@
     router.use('/typedef',typedefRouter)
     const clangcontextRouter = require('./clangcontext');
     router.use('/clangcontext',clangcontextRouter)
+    const clangdatastructRouter = require('./clangdatastruct');
+    router.use('/clangdatastruct',clangdatastructRouter)
