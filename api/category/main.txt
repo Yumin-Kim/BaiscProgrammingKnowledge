@@ -1,1 +1,1 @@
-Git,Git정리,Linux,Linux정리,Mysql,Mysql 정리,computer,컴퓨터상식/용어정리,cLanguage,C언어입문,java,java시작,
+Git,Git정리,Linux,Linux정리,Mysql,Mysql 정리,computer,컴퓨터상식/용어정리,cLanguage,C언어입문,java,java시작,datecommunication,데이터 통신 정리,operationsystem,OS운영체제,Ccompare,C vs 다른언어비교,typescript,TypeScript공부,Android,Android 공부,

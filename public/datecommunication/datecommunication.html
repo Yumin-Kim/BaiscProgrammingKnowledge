@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>datecommunication</title>
+    <script src="../js/ajax.js" ></script>
+    <style>
+        p
+        {
+            font-weight: bold;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="/">datecommunication</a></h1>
+    <h2> 데이터 통신 정리 </h2> 
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+        <p>
+        Sub Category : <input type="text" placeholder="title" name="subcategory"  >
+        </p>
+        <p>
+        Sub Description : <input type="text" placeholder="description" name="subdescription" >
+        </p>
+        <p>
+            <input type="submit" >
+        </p>
+    </form>
+    <ul class="subCategory">
+    </ul>
+    <h1>데이터 통신!!</h1>
+    <ul>
+        <h2>모르는 용어 정리</h2>
+        <li>
+            <p>네트워크(네트워크에 필요한 구성 요소들)</p>
+            <p>케이블이나 전화선, 무선 링크 등으로 연결되어 동일한 프로토콜을 사용하는 디바이스들의 집합</p>
+            <p>네트워킹 (네트워크 데이터를 서로 주고받는 과정 / 송수신)</p>
+            <p>
+                네트워크에 연결된 디바이스들 간의 데이터 전송
+            </p>
+            <p>
+                네트워크 통신
+            </p>
+            <p>
+                주소: 통신노드 고유의 주소, 보내려고하는 컴퓨터의 목적지 주소(IP주소 + 포트번호)
+            </p>
+            <p>
+                데이터 전송: 패킷(헤더 + 바디), 보내려고하는 데이터의 한 단위.
+            </p>
+        </li>
+        <li>
+            <p>유니캐스트 : MAX 기반으로 상대측 IP주소를 목적지로 하는 일대일 통신 방식</p>
+            <p>브로드캐스트 : 자신의 호스트가 속해 있는 네트워크 전체를 대상으로 패킷을 전송 하는 일대다 통신방식</p>
+            <p>멀티캐스트 :하나 이상의 송신자들이 특정한 하나 이상의 수신자들에게 데이터를 전송하는 방식</p>
+             
+        </li>
+        <li>
+            <p>
+                플래그 (컴퓨팅): 컴퓨터에서 무언가를 기억하거나 또는 다른 프로그램에게 약속된 신호를 남기기 위한 용도로 프로그램에 사용되는 미리 정의된 비트
+            </p>
+        </li>
+        <li>
+           <p>인코딩(encoding) / 디코딩(decoding)</p> 
+           <p>인코딩은 부호화하다 즉 암호화 하다라는 의미  >> <b>입력 데이터를 컴퓨터 속에서 사용하는 코드로 변환하는것</b></p>
+           <p>문자나 기호들의 집합을 컴퓨터에 저장 하거나 통신에 사용할 목적으로 부호화 하는방법</p>
+        </li>
+        <li>
+            <p>인코딩의 반대 개념으로 복호화라고 하는데 인코딩된 정보를 부호화 되기전으로 되돌리는 처리방식</p>
+            <p>이 과정이 있는 이유: 국가별로 언어가 다르듯이 각 언어 마다 하나의 구격으로 표준화 시켜 국가별로 또는 개인의 요구에 따라 사용할 수 있도록 문자 집합 구성 </p>
+        </li>
+        <li>
+            <p>packet(패킷)</p>
+            <p>통신망을 통해 전송하기 쉽도록 자른 데이터의 전송 단위입니다.</p>
+            <p>패킷은 헤더,데이터,테일러로 구성되어 있다</p>
+            <p>헤더에는 수신처의 인터넷 주소 와 순서 // 테일러에는 에러 정보가 기록됨</p>
+            <p>
+                데이터의 묶음 단위로 한번에 전송할 데이터의 크기를 나타냅니다. 
+                제3계층 이상에서는 이 데이터 묶음을 패킷이라고 부르며, 제2계층에서는 프레임이라고 부릅니다.
+            </p>
+        </li>
+        <li>
+            <p>이더넷</p>
+            <p>이더넷(영어: Ethernet)은 컴퓨터 네트워크 기술의 하나로, 일반적으로 LAN, MAN 및 WAN에서 가장 많이 활용되는 기술 규격이다.(하나의 통신기술)>>LAN에서 사용하는 네트워크 방식</p>
+            <p>네트워킹의 방식으로 CSMA/CD 포로토콜 사용(신호를 감지하여 충돌을 방지)</p>
+            <p>인터넷</p>
+            <p>전세계 ISP(Internet Service Provider >> 인터넷을 접속을 제공해주는 기업)들이 서로 연결된 네트워크</p>
+        </li>
+    </ul>
+        <h2>데이터 통신 배우면서 정리</h2>
+        <p>데이터 통신 시스템
+            <img style="width: 700px;" src="https://slidesplayer.org/slide/11162006/59/images/5/2.+%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0+%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98+%EA%B5%AC%EC%84%B1+%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0+%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98+%EA%B5%AC%EC%84%B1+%EC%9A%94%EC%86%8C+%EC%A0%95%EB%B3%B4+%EC%A0%84%EC%86%A1+%EC%8B%9C%EC%8A%A4%ED%85%9C+%3A+%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC+%EC%A0%84%EC%86%A1%ED%95%98%EB%8A%94+%EC%97%AD%ED%95%A0.jpg" alt="">
+        </p>
+        <h2>통신 정리!!</h2>
+        <ul>
+            <li>
+                <ul>
+                    <li>                    
+                        <p>통신 네트워크</p>
+                        <p>떨어져 있는 두개 이상의 단말(컴퓨터,node)간에 통신(데이터의 주고받음)을 위하여 연결해주는 장비(link)와 연결 매체 그리고 이것을 제어하는 통신 규약(protocol)을 말한다  </p>
+                    </li>
+                    <li>
+                        <p>네트워크의 물리적인 구조</p>
+                        <p>단말(NODE)와 그 단말을 이어주는 연결선로(Link)로 이루어져있다</p>
+                        <p>단말은 최종 장비와 중계장비로 이루어져있다</p>
+                        <p>연결 선로는 특성에 따라 단방향 , 반이중 , 전이중으로 나뉜다</p>
+                        <ul>
+                            <li>단방향 통신 한방향으로 한쪽으로 밖에 이동 하지 못한다 ex) 모니터 키보드 TV</li>
+                            <li>반이중 통신은 양방향 통신이 가능하지만 한번 이동시에 한쪽으로만 이동 가능하다 ex)96k</li>
+                            <li>전이중 통신은 양방향 전송이 가능하다 ex)전화</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>네트워크의 토폴리지(Topology,회선망)</p>
+                        <p>컴퓨터 네트워크의 요소들(링크,노드) 물리적으로 연결하는 방식 </p>
+                        <p>5가지가 있으며 :: 버스,메시,링,스타,트리 가 있다 </p>
+                    </li>
+                    <li>
+                        <h2>OSI 7계층</h2>
+                        <img style="width: 700px;" src="https://steemitimages.com/DQmcEryJALJy1FmtmcCCy4brmVWBcqQTnPYRgDWKF1pdx7A/image.png" alt="">
+                        <img src="http://blogfiles.naver.net/MjAxNjEwMjVfMjIy/MDAxNDc3NDAwNDcwMDMz.c3WiqzVj89cIle1p-DKdCe9A2DvuIAS9Nk-KWFd1qtMg.F75STpCv8KwOjX1mgt6knWGAMlaGNy5eG06I5J0vSrMg.PNG.culturestomer/Image.png" alt="">
+                        <p>OSI(Open Systems Interconnection Reference Model)</p>
+                        <p>국제 표준화 기구에서 개발하여 컴퓨터 네트워크 프로토콜 디자인 및 통신을 7계층으로 나눈것 >><b> 프로토콜을 기능 별로 나눔</b></p>
+                        <p>프로토콜의 정의</p>
+                        <p>
+                            컴퓨터와 컴퓨터가 네트워크를 이용하여 통신하기 위해 정해 놓은 약속!!<br>
+                            제조업체나 CPU,OS가 다른 컴퓨터끼리도 동일한 프로토콜을 사용한다면 서로 통신할수 있게 됩니다.<br>
+                            컴퓨터끼리 서로 통신하기 위해서는 양쪽이 모두 동일한 프로토콜을 이해하고 처리할수 있어야 합니다<br>
+                            <b>TCP/IP는 인터넷상의 표준이며 가장 널리 사용되는 통신 프로토콜입니다.</b>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>
+                                    물리층(physical) >> 물리적 신호
+                                </p>
+                                :"0"과 "1"을 전압의 고저 또는 빛의 점멸로 변환하거나, 반대의 역할을 담당합니다.<br>
+                                : 네트워크의 하드웨어 전송기술을 말한다. 하드웨어적으로 전기적 신호를 주고 받으므로 가장 복잡하다.<br>
+                                : 랜선, 리피터(Repeater), 허브(Hub)에 해당 계층에 포함된다<br>
+                                웨에 세가지는 신호를 증폭하는 역할을 담당하는 하드웨어이다<br>
+                                <p>>> 허브와 공유기의 차이</p>
+                                <p>공유기 즉 라우터는 ip 할당이 가능하지만 허브는 ip공유가 되지 않는다 할당하는해서 연결 시켜주는 기능을 NAT(Network Address Translation)해주며 이기능은 공유기에 탐재 </p>
+                                <p>허브를 쓰는이유는 회사를 예를 들면 수만은 컴퓨터를 공유기에 할당된 port에 꼽을수 없어 모뎀>>>공유기>>허브로 연결 시켜서 공유기가 할당 해준 ip를 허브가 받아 다른 컴퓨터로 연결시켜주는 방식으로 사용된다</p>
+                                <p>스위치</p>
+                                <p>스위치는 자신에게 연결된 디바이스들의 IP와 MAC 주소를 테이블로 모두 가지고 있다. 따라서 프레임이 자신에게 오면 그것의 목적지가 어디인지를 파악하여 그 디바이스에게 프레임을 보내준다. 트래픽이 훨씬 효율적이 되는 것이다. 다만 스위치는 자신의 테이블에 없는 목적지를 가진 패킷이 오면 그것을 무조건 모든 기계에 포워딩한다. 이런 경우는 허브와 똑같이 동작하는 것이다.</p>
+                                <a href="https://blog.lael.be/post/168">자세한 정보 링크 참조</a>
+                            </li>
+                            <li>
+                                <p>
+                                    데이터 링크층(datalink) >> 오류제어(하드웨어적으로) , MAX주소 정의
+                                </p>
+                                : Point to Point 간 신뢰성있는 전송을 보장하기 위한 계층으로 <b>CRC 기반의 오류 제어와 흐름 제어</b> <br>    
+                                : 네트워크 개체들간 데이터를 전달하고, 하위계층인 물리 계층에서 발생할 수 있는 오류를 찾아낸다.<br>
+                                스위치,브리지등의 장비가 해당 계층에서 동작하며 데이터 단위를 프레임(Frame)이라 한다<br>                            
+                            </li>
+                            <li>
+                                <p>네트워크층(network)>>IP(논리적 주소)정의</p>
+                                :데이터를 수신처까지 보내는 역할을 하게 되는데 수신처로 가는 길이
+                                다양하게 있습니다.<br>
+                                :이때 어느 경로를 사용할것인지 등과 같이 경로를 선택하는 역할을 합니다.<br>      
+                                :라우팅,흐름제어,segemntation,오류제어,인터네트워킹 수행<br>
+                                :Router(공유기) 장비가 해당계층에서 동작(경로 설정 및 IP 주소(논리적인 주소)를 할당하여 통신을 관리 >> 허브기능 또한 설정을 통해 수행 가능!! )<br>
+                            </li>
+                            <li>
+                                <p>트랜스포트층(transport) >> TCP/UDP등 어떤 프로그램을 사용할건지 정의 전달방식 (신뢰성 or 속도) 결정, 단편화, port주소 지정(프로그램의 주소)
+                                    </p>
+                                :양끝 노드(컴퓨터)간의 데이터 전송 관리합니다.<br>
+                                <b>패킷(Packet)들의 전송</b>이 유효한지 확인하고 전송실패시 다시 전송하는 것을 관리합니다.<br>
+                                :데이터의 오류검출, 복구, 흐름제어, 중복검사를 수행<br>
+                                TCP가 전송 계층에 속합니다
+                            </li>
+                            <li>
+                                <p>세션층(session) >> 통신방법 정의(HDLC>>전송제어방식으로 단방향 , 반이중 , 전이중) </p>
+                                : 통신의 관리 , 커넥션(데이터가 흐르는 논리적은 통신로)의 확립/끊기 등 데이터 전송에 관련된 역할을 합니다.<br>
+                                : 양 끝단의 응용프로세스가 통신을 관리하기 위한 방법을 제공<br>
+                                : TCP/IP 세션을 만들고 없앤다.<br>
+                            </li>
+                            <li>
+                                <p>프리젠테이션층,표현계층(Presentation) >> 암호화,압축</p>   
+                                :어플리케이션이 취급하는 정보를 통신에 적합한 데이터 형식으로 만들거나 하위층으로 올라온 데이터를 상위층이 처리할 수 있는 데이터 형식으로 변환하는 등 데이터 형식과 관련된 책임을 집니다.<br>
+                                :사용자의 명령어를 완성 및 결과 표현<br>
+                                -> 기기 고유의 데이터 표현 형식(데이터 포맷) 등을 네트워크 공통의 데이터 형식으로 변환하는 역할을 합니다.<br>
+                            </li>
+                            <li>
+                                <p>애플리케이션층(Application) >> 응용프로그램 사용</p>
+                                :이용되는 어플리케이션 중에서 통신과 관련된 부분을 정해 놓고 있습니다.<br>
+                                :파일전송,전자메일 등을 실현하기 위한 프로토콜이 있습니다.<br>
+                                :응용 프로세스와 직접 연관 하여 응용서비스 수행<br>
+                                :네트워크 소프트웨어 UI , 입출력(I,O)부분을 수행한다<br>
+                                :telnet , ftp 가 응용 계층에 포함된다
+                            </li>
+                        </ol>
+                        <a href="http://blog.naver.com/PostView.nhn?blogId=culturestomer&logNo=220845421311&parentCategoryNo=&categoryNo=14&viewDate=&isShowPopularPosts=true&from=search">자세한 설명</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>패킷 , 프레임 , 세그먼트</h2>
+                <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2F1B3Q8%2Fbtqt6EHFjRW%2FTekD7RNxmDxwDybxkYZ710%2Fimg.png" alt="">
+                
+                <p>세그먼트 : OSI 7계층의 전송 계층 >> 데이터를 네트워크를 통한 실질적인 전송을 위하여 적절한 크기로 분할 조각</p>
+                <p>패킷 : OSI 7계층의 네트워크 계층 >> 전송을 위해 데이터 조각(세그먼트)에 목적지까지의 전달을 위하여 Source IP 와 Destination IP가 포함된 IP Header가 붙은 형태의 메세지 </p>
+                <p>사이에 ARP프로토콜이 필요하다 ARP(Address Resolution Protocal>>주소 결정(해결) 프로토콜)주소 결정 프로토콜(Address Resolution Protocol, ARP)은 네트워크 상에서 IP 주소를 물리적 네트워크 주소로 대응(bind)시키기 위해 사용되는 프로토콜이다<br> 여기서 물리적 네트워크 주소는 이더넷 또는 토큰링의 48 비트 네트워크 카드 주소를 뜻한다.<br>
+                    3게층의 IP주고를 2계층의 MAC 주소와 매칭 해주는 프로토콜!!
+                 </p>
+                <p>프레임 : OSI 7계층의 데이터 링크 계층 >> 최종적으로 데이터를 전송하기 전에 패킷에 Header(Mac Address 포함)와  CRC(cyclic redundancy check)를 위한 Trailer가 붙은 메세지 </p>
+                <p>
+                    상위 계층에서 보낸 전송 데이터에 오류 확인을 위한 체크섬, 송수신 호스트의 주소, 기타 프로토콜에서 사용하는 제어 코드 등의 정보가 포함된다.에러 검출 시 재전송을 요구하여 복구 과정을 거친다.
+                </p>
+                <p>
+                    CRC란 >> 이진법 기반의 하드웨어에서 구현 하기 쉽고, 데이터 전송 과정에서 발생하는 흔한 오류 검출
+                </p>
+                <p>
+                    FCS(Frame Checked sequence 프레임의 순서를 체크하다)
+                </p>
+                <img src="http://parkerhill.me/wp-content/uploads/2014/11/segment-packet-frame-e1417112281157.png" alt="">
+                <p>
+                    EX)예를 들어 HTTP 교환을 생각해 보자.<br>
+                    HTTP를 사용하는 응용 프로그램은<br>
+                    (1) HTTP 패킷을 생성한다. HTTP 패킷은 HTTP 애플리케이션 데이터 및 HTTP 헤더로 구성된다.<br>
+                    HTTP 패킷은 TCP를 이용하기 때문에, HTTP 패킷은 TCP 헤더가 추가된다.<br>
+                    이 상태가 (2) TCP 패킷이다. TCP 패킷은 IP를 이용하기 때문에 TCP 패킷에 IP 헤더가 붙는다.<br>
+                    이 상태가 (3) IP 패킷이다.<br>
+                    IP 패킷을 이더넷으로 전송하기 위해 MAC 헤더를 붙인 것이 (4) MAC 구조이다.<br>
+                    데이터 링크 계층이므로 MAC 패킷라고 부르지 않고 MAC 프레임이라는 것이다.<br>
+                    
+                    MAC 프레임은 크게 세 부분으로 나뉜다. 헤더, 페이로드, 트레일러이다. 헤더는 프레임의 시작 부분에 프레임을 보내고 받을 대상 주소 정보 등이 들어가는 곳이다. 트레일러 프레임의 마지막에 데이터가 정확하게 수신 할 수 있는가에 대한 무결성을 검증하기위한 FCS 라는 데이터가 들어있다. 그리고 헤더와 트레일러 사이에 있는 페이로드는 송수신 할 데이터 그 자체이다. 이 페이로드가 방금 IP 패킷에 해당하는 부분이다.
+                </p>
+                <ul>
+                    <h2>PDU(Protocal Data Unit) 데이터 통신에서 상위 계층이 전달한 데이터에 붙이는 제어 정보</h2>
+                    <h3>프로토콜이 정보의 운반을 위해서 데이터에 트레일러를 붙여 전송하는 단위</h3>
+                    <h4>PDU의 구성</h4>
+                    -PCI(Protocal Control Unit) : 해더 정보(제어 정보)<br>
+                    -SDU(Service Data Unit) : 실제 사용자 정보(payload>> 전송되는 데이터)<br>
+                    <li>
+                        물리 계층 PDU : 비트 스트림
+                    </li>
+                    <li>
+                        데이터 링크 계층 PDU : 전달 정보(프레임)    
+                    </li>
+                    <li>
+                        네트워크 PDU : 패킷 혹은 UDP 데이터그램
+                    </li>
+                    <li>
+                        전송계층 PDU : TCP세그먼트
+                    </li>
+                    <li>
+                        응용계층 PDU : 메시지 , 데이터
+                    </li>
+                    <img src="https://t1.daumcdn.net/cfile/tistory/999DDA3359E1A7E517" alt="">
+                </ul>
+            </li>
+            <li>
+                <a href="https://goitgo.tistory.com/25">TCP/IP 계층별 분석 양호 사이트</a>
+            </li>
+            <ul>
+                <li>Application(Application + Presentation + Session )
+                    <p>중심 프로토콜 : HTTP , FTP , Telnet , DHCP , Ping</p>
+                </li>
+                <li>Transport
+                    <p>중심 프로토콜 : TCP(연결) , UDP(비연결)</p>
+                    TCP는 연결 지향 프로토콜로 연속적으로 패킷의 상태정보를 확인하고 유지해야함<br>
+                    장치간의 데이터를 전송하기 전에 "연결"에 관련하여 세션을 수립하는 과정은 중요합니다. <br> 
+                    해당 절차는 tcp 의 논리적인 접속을 성립(establish)하기 위해서 필수적이다<br>
+                    <img style="width: 700px;" src="https://t1.daumcdn.net/cfile/tistory/99FB2A3D5B32ED7B0B" alt="">
+                    <ol>
+                        <h4>SYN 은 synchronize sequence numbers(동기화 시퀀스 번호) ACK는 acknowledgements(감사하다) 의 약자.</h4>
+                        <li>
+                            Client 는 Server 에 접속 요청 메시지(SYN)를 전송하고 SYN_SENT(보낸) 상태가 됩니다.
+                        </li>
+                        <li>
+                            
+                            이때 서버는 Listen 상태로 포트 서비스가 가능한 상태여야 한다. (Closed :닫힌상태) B서버는 SYN요청을 받고 A클라이언트에게 요청을 수락한다는 ACK 와 SYN flag 가 설정된 패킷을 발송하고 A가 다시 ACK으로 응답하기를 기다린다. 이때 B서버는 SYN_RECEIVED(받았다) 상태가 된다.<br>
+                            ACK(성공했다는 표시를 SYN의 랜덤한 숫자에 1을 더하여 표시)
+                        </li>
+                        <li>
+                            client 는 server 에게 수락 확인 (ACK)를 보내고 server 는 ESTABLISHED(성립) 상태가 됩니다.
+                        </li>
+                    </ol>
+                </li>
+                <li>Internet
+                    <p>중심 프로토콜 : IP(비연결) , ARP ,RARP , ICMP ,IGMP</p>
+                </li>
+                <li>Network Access(Datalink + physical)
+                    <p>중심 프로토콜 : ethernet</p>
+                </li>
+            </ul>
+        </ul>
+ <p>///////////////////////////////////////////////////////////////////////////////////////////////////////////////</p>       
+ <h3>socket(소켓!!) 원리 및 이해  </h3>
+ <ul>
+    <li>
+        <p>
+            소켓의 정의
+        </p>
+        소켓은 소프트웨어로 작성돤 통신 접속점이라고 할 수 있는데 네트웍 응용 프로그램은 소켓을 통하여 통신망으로 데이터를 송수신하게된다<br>
+        소켓은 응요 프로그램 에서 TCP/IP를 이용하는 창구 역할을 응용 프로그램과 소켓 사이의 인터페이스를 소켓 인터 페이스라고 한다<br>
+        
+    </li>
+ </ul>
+</body>
+</html>

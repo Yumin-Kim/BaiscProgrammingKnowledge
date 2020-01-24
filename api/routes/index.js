@@ -146,3 +146,20 @@ router.use('/cLanguage', cLanguageRouter);
 const javaRouter = require('./java/java'); 
 router.use('/java', javaRouter);
                 
+const datecommunicationRouter = require('./datecommunication/datecommunication'); 
+router.use('/datecommunication', datecommunicationRouter);
+                
+const operationsystemRouter = require('./operationsystem/operationsystem'); 
+router.use('/operationsystem', operationsystemRouter);
+                
+
+                
+const CcompareRouter = require('./Ccompare/Ccompare'); 
+router.use('/Ccompare', CcompareRouter);
+                
+const typescriptRouter = require('./typescript/typescript'); 
+router.use('/typescript', typescriptRouter);
+                
+const AndroidRouter = require('./Android/Android'); 
+router.use('/Android', AndroidRouter);
+                
