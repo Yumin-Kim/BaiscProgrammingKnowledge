@@ -111,6 +111,54 @@
                     </p>
                 </li>
             </li>
+            <li>
+<h1>React 다시 시작!!</h1>
+                <pre>
+                    <code>
+// PureComponent는 단순한 state 변화는 스스로 shouldCompomentUpdate를 해줌(객체 배열의 state 변화는 못알아본다) 
+//state를 객체를 활용하면 계속 새로운 객체를 만들기 때문에 사용 안하는 것이 편함 // 배열은  ...를 사용하면 편함
+//[{},{},{}]>>  state이렇게 주는것보다 Componenet를 잘게 만들어서 관리
+//sholdComponenetUpdate state,props변화에도 redering 안되게 막을 수 있다!! 
+// //랜더링하고 모든 이벤트가 자동으로 실행되는거 같다
+// //Ref ,onClick 말고 태그를 이벤트 발생하는 방법 더 생각해보기
+// cons = ()=>{
+//     // 콜백함수여서 ()=> 없이 넣으면 자동으로 실행
+//     console.log('asd')
+//     this.setState({result : []});
+// }
+// makeTag = ( params ) =>{
+//    console.log(params)
+//    params !== null ? params.addEventListener('click',()=> this.setState({result : []})) : null;
+// }
+
+//컴포넌트 라이플 사이클 
+// class > constructor > render > ref > componentDidMount > (setState,props > shouldComponentUpdate(true) > render > componentDidMount ) >>(Delete Component)>> componentWilunmount 
+
+
+///////////////////////
+Hooks// 변수를 위로 뺀 이유는 함수 전체가 렌더링 되면서 변수가 undefineed가 된다
+//함수 컴포넌트는 전체가 실행되어서 변수를 위에 선언하는 방법도 있지만
+//useRef를 활용하는 방법도 있다 >> 활용하여 잠시 기억하는 용으로 사용 가능!!
+//값이 바뀌어도 render에는 영향을 미치고 싶지 않을때 사용!! >> current 사용 주시!!
+
+//useEffect가 처음에는 실행되고 그다음 useEffect가 실행되는 여부는 [안에 변하는 state값을 넣어 주면 그값이 변할때 마다 실행된다]
+//
+// useEffect(() => {//componentDidMount , componentDidUpdate
+//     console.log("componentDidMount , componentDidUpdate",++counter)
+//     intervalRSP();
+//     return () => { // componentWillmount
+//         console.log("componentWillmount")
+//         clearInterval(interval.current);
+//     };
+// }, [imgCoord])//[ 배열안에 변화하는 state를 매개변수로 넣게 되면 그 state가 변화 할때마다 componentDidUpdate 실행// 꼭 state가 아니여도 괜찮음 ]
+//무거운 함수면 useMemo 함수값 기억!!
+//함수 자체를 기억 또한 값또한 변화가 없으면 계속기억
+                    </code>
+                </pre>
+            </li>
+            <li>
+                
+            </li>
         </ul>
     </div>
 </body>

@@ -16,6 +16,10 @@ router.get('/', (req, res, next) => {
     res.sendfile(path.join(__dirname + '../../../index.html'));
 });
 
+router.get('/react',(req,res,next)=>{
+    res.sendFile(path.join(__dirname + '../../../public/react.html'))
+});
+
 router.post('/', (req, res, next) => {
     const { title, description } = req.body;
     const savesdir = path.join(__dirname + `../../../public/${req.body.title}`);
@@ -162,4 +166,10 @@ router.use('/typescript', typescriptRouter);
                 
 const AndroidRouter = require('./Android/Android'); 
 router.use('/Android', AndroidRouter);
+                
+const FrontEndBasicConceptRouter = require('./FrontEndBasicConcept/FrontEndBasicConcept'); 
+router.use('/FrontEndBasicConcept', FrontEndBasicConceptRouter);
+                
+const ReactCollectionRouter = require('./ReactCollection/ReactCollection'); 
+router.use('/ReactCollection', ReactCollectionRouter);
                 

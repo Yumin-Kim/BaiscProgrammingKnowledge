@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ReactCollection</title>
+    <script src="../js/ajax.js"></script>
+  </head>
+  <body>
+    <h1><a href="/">ReactCollection</a></h1>
+    <h2>React 유료강의보고 정리!!</h2>
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+      <p>
+        Sub Category :
+        <input type="text" placeholder="title" name="subcategory" />
+      </p>
+      <p>
+        Sub Description :
+        <input type="text" placeholder="description" name="subdescription" />
+      </p>
+      <p>
+        <input type="submit" />
+      </p>
+    </form>
+    <ul class="subCategory"></ul>
+
+    <h1>Front-End : React + Next + Redux + Redux.Saga</h1>
+    <h1>Back-End : Express + Sequelize(Mysql)</h1>
+    <h1>중점: Front-End,Back-end 각각 서버를 보유하고 있다!!</h1>
+    <h2>프로젝트에는 css프레임워크 사용</h2>
+    <h2>
+      Next.js를 사용하면 SSR이나 Router가 어떻게 사용되는지 모르기 때문에 나중에
+      사용<br />
+      순수하게 SSR,code spliting 한번 해보는것이 중요!!
+    </h2>
+    <h2>
+        파일 분리시 
+        <ol>
+            <li>pages(실질적인 페이지 링크 거는 파일들)</li>
+            <li>container(Redux의 dispatch 사용되는 파일들)</li>
+            <li>components(Redux를 사용하지 않고 부모에게 받아온 데이터를 뷰에 뿌려주는 파일들)</li>
+            <li>서버 담당하는 페이지</li>
+            <li>웹펙</li>
+        </ol>
+        
+    </h2>
+    <ol>
+      <li>원하는 장르 만들고 싶었던 사이트 기획 필요 >> backend(DB 구성) front-end(DB를 통해 어떤 데이터가 응답이 올지 Dummy Data로 구성) </li>
+      <li>Front단에 파일 구성 redering만 담당하는 Componenet파일 Dispatch가 포함되는 Component 파일 구성</li>
+      <li>Front 에서 dummy Data로 기본 구성이 완료 되었으면 backend Express로 어떤 Api사용할건지 고민!!</li>
+    </ol>
+  </body>
+</html>

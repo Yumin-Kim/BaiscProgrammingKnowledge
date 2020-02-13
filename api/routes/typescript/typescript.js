@@ -9,3 +9,5 @@
 
     module.exports = router;
     
+    const exerciseTypeScriptRouter = require('./exerciseTypeScript');
+    router.use('/exerciseTypeScript',exerciseTypeScriptRouter)
