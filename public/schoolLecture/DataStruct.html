@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DataStruct</title>
+    <script>
+        window.onload = () => {
+            const arr = ["data", "data1", "data2"];
+            arr.map((v) => {
+                const data = document.querySelector(`.${v}`).textContent.replace(/\n/g, "<br>")
+                document.querySelector(`.${v}`).innerHTML = data;
+            }
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <h1><a href="/schoolLecture">DataStruct</a></h1>
+    <h2> 데이터구조 </h2>
+    <h3>2020 03 22 1주차</h3>
+    <p class="data">
+        추상자료형(Abstract Data Type).
+        기능의 규헌 부분은 나타내지 않고 순수한 기능이 무엇인지 나열한것을 추상 자료형이라고 한다
+        비유 : 사용 설명서와 같이 기능관 사용 방법을 정의한 것이다 >> 예를 들면 내부적으로 어떤 기능을 실행 했을때 와트나 내부 회로에서 어떻게 작용하는지느 전혀 나오지 않는다
+        추상 자료형은 구현자와 사용자를 분리해준다. 라이브러리를 가져다 쓰거나 내장 함수를 사용하는것도 추상 자료형이 정의 하기 때문
+        추상 자료형은 내부 은닉으로 이루어져 있다
+        -정리-
+        <b>사용자는 내부 구현이 어떻게 구현이 어떻게 되어 있는지 알필요가 없다.추상 자료형을 보고 목적에 맞게 가져다 사용히면 된다
+            구현자 입장에서는 구현을 위한 기능과 데이터 집합을 나열하는 것이다.</b>
+        알고리즘 의 선능 분석 기법
+        실행 기간을 측정 하는 방법
+        알고리즘의 복잡도
+        -시간 복잡도 분석
+        -공간 복잡도 분석
+    </p>
+    <p class="data1">
+        2020 03 24
+        추상 자료형 설명
+        알고리즘 성능 분석 기법
+        실행 시간을 측정
+        알고리즘 복잡도
+        -시간 복잡도 분석
+        -공간 복잡도 분석
+        실행 시간 측정 방법 
+        time.h 라이브러리 파일 사용 및 clock_t 변수 사용후 >> CLOCKS_PER_SEC로 나누는데  클락 파형에서 시작 과 마지막 차의 값을 나눌때 사용
+        클락 파형을 논리 회로 라고 말씀하셨고 연산하면 클락의 변화가 생겨 파형을 이루게 된다 
+        strdlib.h를 활용하여  rand 함수 사용 해봄 srand(seed)활용하여 초기값을 계속 제공 >> seed = time(Null) 사용하여 시간을 제공하여 초기값 생성
+        시간 복잡도 함수 계산시 빅오 표기법
+        무조건 최악의 경우를 생각하고 복잡도 분석하여 빅오 표기법 활용
+        <code>
+            int i , j ; 1.1
+            for( i = 0 ; i < n ; i++ ){ 2.n+1
+                for( j = 0 ; j < n  ;j++) 3.n(n+1)
+                    printf(i,j); n * n
+            }
+
+            조합 결과>> 2n^2 + 2n + 2 >>> 빅오 표기법 n^2
+            >>상수를 무시하는 이유는 n이 충분히 큰수 라 가정을 하고 있기 떄문
+        </code>
+
+        빠른 순서   ( 상수함수 < 로그함수 < 선형함수 < 다항함수 < 지수함수 )
+
+        빅오 표기법 예제
+        
+        1. O(1) : 스택에서 Push, Pop
+        2. O(log n) : 이진트리
+        3. O(n) : for 문
+        4. O(n log n) : 퀵 정렬(quick sort), 병합정렬(merge sort), 힙 정렬(heap Sort)
+        5. O(): 이중 for 문, 삽입정렬(insertion sort), 거품정렬(bubble sort), 선택정렬(selection sort)
+6. O() : 피보나치 수열
+    </p>
+    <p class="data2">
+
+    </p>
+
+</body>
+
+</html>

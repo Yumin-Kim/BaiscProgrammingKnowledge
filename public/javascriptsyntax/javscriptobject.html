@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javscriptobject</title>
+    <script>
+        window.onload = () => {
+            const arr = ["data", "data1", "data2","data3"];
+            arr.map((v) => {
+                const data = document.querySelector(`.${v}`).textContent.replace(/\n/g, "<br>")
+                document.querySelector(`.${v}`).innerHTML = data;
+            }
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <h1><a href="/javascriptsyntax">javscriptobject</a></h1>
+    <h1>자바스크립트는 프로토타입 기반 객체 지향 프로그래밍 언어이다!!</h1>
+    <h2> 자바스크립트는 객체 기반의 스크립트 언어이다 </h2>
+    <h2>프로토 타입은 밑에 있으니 확인 꼭 하기</h2>
+    <h2>자바스크립트 객체 분류</h2>
+    <img style="width: 500px;" src="https://poiemaweb.com/img/objects.png" alt="">
+    <ul>
+        <li>
+            native object(그림참고)
+        </li>
+        <li>
+            Host object
+            <p>호스트 객체(Host object)는 브라우저 환경에서 제공하는 window, XmlHttpRequest, HTMLElement 등의 DOM 노드 객체와 같이 호스트 환경에 정의된 객체를 말한다.</p>
+            <ul>
+                <li>BOM(Browser Object Model)
+                    <p>브라우저 객체 모델은 브라우저 탭 또는 브라우저 창의 모델을 생성한다. </p>
+                    <img style="width: 400px;" src="https://poiemaweb.com/img/BOM.png" alt="">
+                </li>
+                <li>
+                    <a href="#dom">
+                        DOM(Document Object Model)
+                    </a>
+                    <p>문서 객체 모델은 현재 웹페이지의 모델을 생성한다. 최상위 객체는 document 객체로 전체 문서를 표현한다. </p>
+                    <img src="https://poiemaweb.com/img/DOM.png" alt="">
+                </li>
+            </ul>
+        </li>
+        <li>
+            user-defined object
+        </li>
+    </ul>
+    <h3 class="data">
+        자바스크립트는 객체(object) 기반의 스크립트 언어이며 자바스크립트를 이루고 있는 거의 "모든것"이 객체이다
+        원시 타입을 제외한 나머지 값들(함수 , 배열 , 정규 표현식)등이 모두 객체이다
+        자바스크립트의 객체는 객체 지향의 상속 구현하기 위해 "프로토타입"이라고 불리는 객체의 프로퍼티와 메소드를 상속받는다
+        객체 리터럴
+        const obj = {a : 2 , b: 2}
+        Object 생성자 함수
+        생성자(constructor) 함수란 new 키워드와 함께 객체를 생성하고 초기화하는 함수를 말한다.생성자 함수를 통해 생성된 객체를 인스턴스(instance)라 한다.
+        String, Number, Boolean, Array, Date, RegExp 등의 빌트인 생성자 함수를 제공한다.
+        자바스크립트 엔진은 객체 리터럴로 객체를 생성하는 코드를 만나면 내부적으로 Object 생성자 함수를 사용하여 객체를 생성한다.
+        const person = new Object();
+        프로퍼티 값 읽기
+        대괄호 내에 들어가는 프로퍼티 이름은 반드시 문자열이어야 한다.
+        console.log(person['first-name'])
+        Pass-by-reference
+        object type을 객체 타입 또는 참조 타입이라 한다.
+        참조 타입이란 객체의 모든 연산이 실제값이 아닌 참조값으로 처리됨을 의미한다.
+        원시 타입은 값이 한번 정해지면 변경할 수 없지만(immutable), 객체는 프로퍼티를 변경, 추가, 삭제가 가능하므로 변경 가능(mutable)한 값이라 할 수 있다.
+        객체 타입은 동적으로 변화할 수 있으므로 어느 정도의 메모리 공간을 확보해야 하는지 예측할 수 없기 때문에
+        런타임에 메모리 공간을 확보하고 메모리의 힙 영역(Heap Segment)에 저장된다.
+        Pass-by-value
+        원시 타입은 값이 한번 정해지면 변경할 수 없다.(immutable)
+        또한 이들 값은 런타임(변수 할당 시점)에 메모리의 스택 영역(Stack Segment)에 고정된 메모리 영역을 점유하고 저장된다.
+    </h3>
+    <h3 class="data2">
+        이와 같이 원시 타입은 메모리 영역에서 변경 불가능하지만 객체는 Pass-by-reference로 변경이 가능하다
+        이 문제를 해결하기 위해 불변 데이터 패턴이 있다
+        -객체의 방어적 복사(defensive copy)
+        Object.assign(target, ...source) >>2인자가 덮어버림
+        var a = { a : 2} var b = {b:3}
+        >> Object.assign(a,b) >> {a:2,b:3}
+        var a = { a : 2} var b = {b:1}
+        >> Object.assign(a,b) >> {a:1}
+        //중점은 deep copy를 지원하지 않는다. 객체 내부의 객체(Nested Object)는 Shallow copy된다.
+        
+        -불변객체화를 통한 객체 변경 방지
+        Object.freeze
+    </h3>
+    <h4>객체의 종류</h4>
+    <img style="width: 100%;" src="https://poiemaweb.com/img/object.png" alt="">
+    <ul>
+        <li>
+            Buili in Object<br>
+            웹페이지가 브라우저에 의해 로드되자마자 별다른 행위없이 바로 사용이 가능하다
+        </li>
+        <ul>
+            <li>
+                Standard Built-in Objects(표준 빌트인 객체)를 제외한 BOM과 DOM을 Native Object라고 분류하기도 한다.
+            </li>
+            <li>
+                또한 사용자가 생성한 객체를 Host Object(사용자 정의 객체)라 한다.
+            </li>
+        </ul>
+        <li>
+            Host Object(사용자 정의 객체)<br>
+            사용자가 생성한 객체 들이다. constructor 혹은 객체리터럴을 통해 사용자가 객체를 정의하고 확장시킨 것들이기 때문에<br>
+            Built-in Object 와 Native Object가 구성된 이후에 구성된다.
+        </li>
+    </ul>
+    <h2>
+        프로토 타입!!!
+    </h2>
+    <p class="data1">
+        모든 객체는 [[Prototype]]이라는 내부 슬롯이 있다.[[Prototype]] 내부 슬롯은 프로토타입 객체를 가리킨다.
+        프로토타입 객체는 다른 객체에 공유 프로퍼티를 제공하는 객체를 말한다.
+        __proto__ 프로퍼티는 [[Prototype]] 내부 슬롯이 가리키는 프로토타입 객체에 접근하기 위해 사용하는 접근자 프로퍼티이다. 
+
+        Function.prototype
+        ƒ () { [native code] } >> 내장 객체라는뜻이고 ECMAscript가 부여
+        
+        Function.prototype.__proto__
+        {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+
+        prototype 프로퍼티는 함수 객체만이 소유하는 프로퍼티이다.
+        즉 일반 객체에는 prototype 프로퍼티가 없다. >> 리터럴 선언시 undefined 
+
+        Object가 되는이유는 생성자 함수 이기 떄문이다!!
+    </p>
+    <h3 class ="data3">
+        자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 객체와 연결되어 있다.
+        그리고 이것은 마치 객체 지향의 상속 개념과 같이 부모 객체의 프로퍼티 또는 메소드를 상속받아 사용할 수 있게 한다.
+        Prototype 객체는 생성자 함수에 의해 생성된 각각의 객체에 공유 프로퍼티를 제공하기 위해 사용한다.
+        [[Prototype]]의 값은 Prototype(프로토타입) 객체이며 __proto__ accessor property로 접근할 수 있다. __proto__ 프로퍼티에 접근하면
+        내부적으로 Object.getPrototypeOf가 호출되어 프로토타입 객체를 반환한다. 
+        
+        객체 리터럴 방식으로 생성된 객체는 결국 내장 함수(Built-in)인 Object() 생성자 함수로 객체를 생성하는 것을 단순화시킨 것이다.
+        자바스크립트 엔진은 객체 리터럴로 객체를 생성하는 코드를 만나면 내부적으로 Object() 생성자 함수를 사용하여 객체를 생성한다.
+
+        [[Prototype]]은 객체의 입장에서 자신의 부모 역할을 하는 객체, 즉 프로토타입 객체를 가리킨다.
+        Object.prototype 객체를 프로토타입 체인의 종점(End of prototype chain)이라 한다
+    </h3>
+    <img style="width: 100%;" src="https://poiemaweb.com/img/object_literal_prototype_chaining.png" alt="">
+    <img style="width: 100%;" src="https://poiemaweb.com/img/constructor_function_prototype_chaining.png" alt="">
+    <ul>
+        <li>[[Prototype]]
+            <p>
+                모든 객체가 가지고 있는 인터널 슬롯이다.<br>
+                객체의 입장에서 자신의 부모 역할을 하는 프로토타입 객체를 가리키며 함수 객체의 경우 Function.prototype를 가리킨다
+            </p>
+        </li>
+        <li>
+            prototype 프로퍼티
+            <p>
+                함수 객체만 가지고 있는 프로퍼티이다.<br>
+                함수 객체가 생성자로 사용될 때 이 함수를 통해 생성될 객체의 부모 역할을 하는 객체(프로토타입 객체)를 가리킨다.
+            </p>
+        </li>
+    </ul>
+    <div id="dom">
+        <p>
+            텍스트 파일로 만들어져 있는 웹 문서를 브라우저에 렌더일하려면 브라우저가 이해 할 수 있느 ㅈ구조로 메모리에 올려야한다<br>
+            브라우저의 렌더링 엔진은 웹 문서를 로드한후에 파싱하여 웹문서를 브라우저가 이해할수잇는 구조로 메모리에 저장하는게 그것이 DOM이다<br>
+            모든 요소와 요소의 어트리뷰트, 텍스트를 각각의 객체로 만들고 이들 객체를 부자 관계를 표현할 수 있는 트리 구조로 구성한 것이 DOM이다.<br>
+            이 DOM은 자바스크립트를 통해 동적으로 변경할 수 있으며 변경된 DOM은 렌더링에 반영된다.<br>
+            정적인 웹페이지에 접근하여 동적으로 웹페이지를 변경하기 위한 유일한 방법은 메모리 상에 존재하는 DOM을 변경하는 것이고, 이때 필요한 것이 DOM에 접근하고 변경하는 프로퍼티와 메소드의 집합인 DOM API이다.<br>
+            DOM은 HTML,ECMA script와 별개로 중립적이다<br>
+            <ul>
+                <li>HTML문서에대한 모델 구성
+                    <p>
+                        HTML 문서를 로드한 후에 모델을 메모리에 생성 이 모델은 객체의 트리로 구성 이것을 DOM Tree
+                    </p>
+                    <p>
+                        DOM tree는 브라우저 HTML문서를 로드후 파싱하여 생성하는 모델을 의미(객체를 트리로 구조화)
+                    </p>
+                </li>
+                <li>
+                    HTML 문서 내의 각 요소에 접근 수정
+                </li>
+            </ul>
+        </p>
+    </div>
+</body>
+
+</html>

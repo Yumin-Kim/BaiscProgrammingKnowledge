@@ -173,3 +173,15 @@ router.use('/FrontEndBasicConcept', FrontEndBasicConceptRouter);
 const ReactCollectionRouter = require('./ReactCollection/ReactCollection'); 
 router.use('/ReactCollection', ReactCollectionRouter);
                 
+const NodeBasicCategoryRouter = require('./NodeBasicCategory/NodeBasicCategory'); 
+router.use('/NodeBasicCategory', NodeBasicCategoryRouter);
+                
+const javascriptsyntaxRouter = require('./javascriptsyntax/javascriptsyntax'); 
+router.use('/javascriptsyntax', javascriptsyntaxRouter);
+                
+const schoolLectureRouter = require('./schoolLecture/schoolLecture'); 
+router.use('/schoolLecture', schoolLectureRouter);
+                
+const tutorialsRouter = require('./tutorials/tutorials'); 
+router.use('/tutorials', tutorialsRouter);
+                

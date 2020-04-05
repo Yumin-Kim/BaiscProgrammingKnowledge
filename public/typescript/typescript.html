@@ -1,68 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>typescript</title>
-    <script src="../js/ajax.js" ></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>typescript</title>
+  <script src="../js/ajax.js"></script>
 </head>
+
 <body>
-    <h1><a href="/">typescript</a></h1>
-    <h2> TypeScript공부 </h2> 
-    <h3>세부 카테고리를 추가 해주세요!!</h3>
-    <form>
-        <p>
-        Sub Category : <input type="text" placeholder="title" name="subcategory"  >
-        </p>
-        <p>
-        Sub Description : <input type="text" placeholder="description" name="subdescription" >
-        </p>
-        <p>
-            <input type="submit" >
-        </p>
-    </form>
-    <ul class="subCategory">
-    </ul>
-    <h1>
-        Typescript는 javascript 안에 포함된다!!<br> 
-        .js >> .ts<br>
-        javscript를 명시적으로 표현한것이 TypeScript<br>
-        TypeScipt는 Javascript의 미래이다!!
-    </h1>
-    <ul>
+  <h1><a href="/">typescript</a></h1>
+  <h2> TypeScript공부 </h2>
+  <h3>세부 카테고리를 추가 해주세요!!</h3>
+  <form>
+    <p>
+      Sub Category : <input type="text" placeholder="title" name="subcategory">
+    </p>
+    <p>
+      Sub Description : <input type="text" placeholder="description" name="subdescription">
+    </p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+  <ul class="subCategory">
+  </ul>
+  <h1>
+    Typescript는 javascript 안에 포함된다!!<br>
+    .js >> .ts<br>
+    javscript를 명시적으로 표현한것이 TypeScript<br>
+    TypeScipt는 Javascript의 미래이다!!
+  </h1>
+  <ul>
+    <li>
+      <h2>2020 01 22</h2>
+      <p>1-1 ~ </p>
+      <ul>
         <li>
-            <h2>2020 01 22</h2>
-            <p>1-1 ~ </p>
-            <ul>
-                <li>
-                    <h3>1장</h3>
-                    -타입 스크립트를 쓰면서 약타입 에서 강타입으로 변화 >> 에디터의 도움을 많이 받을수 있다 ex)이클립스<br>
-                    -타입스크립트는 언어이자 라이브러리이다>>자바스크립트는 노드(실행기),브라우저가 컴파일러 역할을 하지만 타입스크립트는 Dno도 있지만 node사용<br>
-                    -npm i typescript(패키지 다운)<br>
-                    -ex)<code>const a : number = 10;</code> : 타입을 명시 해준다<br>
-                    -npm i -g typescript 명령어 설치도 필요 >> 명령어 사용시 power shell 에서 cmd 에서 사용가능 <br>
-                    -tsc가 cli 명령어 이다!!  <br>
-                    -HTML 은 .js로 한다 .ts사용XX<br>
-                    -tsc 파일명.ts -w tsc가 파일을 감시하는 옵션!<br>
-                    -명확히 타입스크립트가 아는 타입은 명시 할 필요 없음 <code>const a = Math.random()</code><br>
-                    -+변수명 할시 Number의 자료 형으로 변환된다<br>
-                    -.js파일과 .ts 파일 같이 뛰우지말것 에러남!!<br>
-                    -자동 완성이 되는이유는 d.ts파일에서 만들었기 때문에 만들어짐 >> d.ts는 타입 정의 하는 파일 <br>
-                    -무턱대고 d.ts공부 하지말것!! >> d.ts. 확인 방법은 F12  <br>
-                    -inteface,extends 유심히 타입을 만들때 상속 받을 수 있음<br>
-                    -간단한 프로그램은 TypeScript 사용하지말고 복잡할때!!<br>
-                    -package.json에 "^3.7.4"에서 ^은 최신버전을 설치하지만 4버젼은 포함 안함 >>"^3"<br>
-                    -tsc 사용 하려면 -g 설치를 하는데 중복해서 설치하게되는데 명령어도 중복을 줄이기 위해 <b>npx tsc 변수명.ts</b>>>딱히 문제는 없는데 프로젝트 버전와 명령어 버전이 다를 수 있음>>에러 발생할 수 있음 <br>
-                    -package.lock.json 은 패키지의 정확한 버전을 기입 -package.json은 범위 기입 <br>
-                </li>
-                
-                <li>
-                    <h3>2장</h3>
-                    - <code>tsconfig.js</code> ts 설정해주는 파일<br>
-                    <p>-자주 사용하는 설정들</p>
-                    <pre>
+          <h3>1장</h3>
+          -타입 스크립트를 쓰면서 약타입 에서 강타입으로 변화 >> 에디터의 도움을 많이 받을수 있다 ex)이클립스<br>
+          -타입스크립트는 언어이자 라이브러리이다>>자바스크립트는 노드(실행기),브라우저가 컴파일러 역할을 하지만 타입스크립트는 Dno도 있지만 node사용<br>
+          -npm i typescript(패키지 다운)<br>
+          -ex)<code>const a : number = 10;</code> : 타입을 명시 해준다<br>
+          -npm i -g typescript 명령어 설치도 필요 >> 명령어 사용시 power shell 에서 cmd 에서 사용가능 <br>
+          -tsc가 cli 명령어 이다!! <br>
+          -HTML 은 .js로 한다 .ts사용XX<br>
+          -tsc 파일명.ts -w tsc가 파일을 감시하는 옵션!<br>
+          -명확히 타입스크립트가 아는 타입은 명시 할 필요 없음 <code>const a = Math.random()</code><br>
+          -+변수명 할시 Number의 자료 형으로 변환된다<br>
+          -.js파일과 .ts 파일 같이 뛰우지말것 에러남!!<br>
+          -자동 완성이 되는이유는 d.ts파일에서 만들었기 때문에 만들어짐 >> d.ts는 타입 정의 하는 파일 <br>
+          -무턱대고 d.ts공부 하지말것!! >> d.ts. 확인 방법은 F12 <br>
+          -inteface,extends 유심히 타입을 만들때 상속 받을 수 있음<br>
+          -간단한 프로그램은 TypeScript 사용하지말고 복잡할때!!<br>
+          -package.json에 "^3.7.4"에서 ^은 최신버전을 설치하지만 4버젼은 포함 안함 >>"^3"<br>
+          -tsc 사용 하려면 -g 설치를 하는데 중복해서 설치하게되는데 명령어도 중복을 줄이기 위해 <b>npx tsc 변수명.ts</b>>>딱히 문제는 없는데 프로젝트 버전와 명령어 버전이 다를 수
+          있음>>에러 발생할 수 있음 <br>
+          -package.lock.json 은 패키지의 정확한 버전을 기입 -package.json은 범위 기입 <br>
+        </li>
+
+        <li>
+          <h3>2장</h3>
+          - <code>tsconfig.js</code> ts 설정해주는 파일<br>
+          <p>-자주 사용하는 설정들</p>
+          <pre>
                         <code>
                         {
                             "compileOptions":{
@@ -82,10 +84,10 @@
                             "extends":[상속],
                         }
                         </code>
-                    </pre> 
-                    -공식문서 handbook >>> whats new 읽기!!<br>
-                    -any뜻 아무 타입이 될수 있다!!<br>
-                    <pre>
+                    </pre>
+          -공식문서 handbook >>> whats new 읽기!!<br>
+          -any뜻 아무 타입이 될수 있다!!<br>
+          <pre>
                     <code>
                         Ts기본 타입 사용 방식 
                         let num:number;
@@ -96,9 +98,9 @@
                         let arr1 : Array< number> =[1,2,3];
                     </code>
                     </pre>
-                </li>                
-                <li>
-                    <pre>
+        </li>
+        <li>
+          <pre>
                         <code>
                             //파일끼리 변수를 공유함 >> arr >> declared 선언 되었다고 에러 남
 //타입 스크립트 할때 일단 자바스크립트로 프로그래밍후(변수에 타입을 적어주지 않고)
@@ -673,9 +675,60 @@ new Person1('hello');
 
                         </code>
                     </pre>
-                </li>
-            </ul>
         </li>
-    </ul>
+      </ul>
+    </li>
+    <li>
+      React  + TS 
+      <pre>
+        <code>
+          //1~2일차까지 정리
+// React + TS 공부 시작!!!
+//react 할때 webPack에 babel 로더 사용하여 최신문법 사용했지만 ts사용시 ts만의 로더 필요 로더중 ts-loader , awesome-typescript-loader
+//react는  @types를 이용하여 타입 스크립트를 다운 로드 받는다!!
+//class ClientDom_Class extends Component< {},State > {}
+//React class는 제네릭자리를 두개를 가지고 첫번재는 props 두번째는 state
+// const onSubmitForm = React.useCallback((e : React.FormEvent) => {
+//const onChange = useCallback<(e:React.ChangeEvent<HTMLInputElement>)=>void >((e)=>
+// const Try  = ({tryinfo}:{ tryinfo:Tryinfo }) =>{
+//이와 같이 함수형 컴포넌트의 받아올 props의 값을 적어 주는 경우도 있지만
+//     return(
+//         <>
+//             <div>{tryinfo.try}</div>
+//             <div>{tryinfo.result}</div>
+//         </>
+//     )
+// }
+// const Try: FunctionComponent<( tryinfo:Tryinfo )> = ({ tryinfo }) => {
+// 이와 같이 작성하는 경우도 있다 >> FunctionComponent라고 적고< () >제네릭을 사용하고 그안에 다음에 올 props값과 props의 데이터를 형을 적어준다!!
+//react는 return문 안에 데이터 타입이 있으니 유츄해서 함수나 ref값을 적을때 사용한다!!
+//setTimeout을 사용하게 되면 typescript가 node.js의 setTimeout인지 window setTimeout인지 모르기 때문에
+//따로 변수로 변수로 뺀다음 window.setTimeout이라고 적어준다!! >> 따로 변수로 불리할 필요가 없음!!
+//useRef 사용시 current가  readonly로 되어있어 ref값을 변경못하는경우가 있다 이경우는 RefObject로서 그런문제가 발생하는데 MutableRefObject로 바꾸게 되면  current값이 readonly가 되지 않아서 변경 가능
+
+//3일차~4일차
+// const ab = {
+//   a: 12,
+//   b: 123
+// };
+
+// type abObj = typeof ab;
+//위와 같이  typeof를 사용하면 객체의 키와 값의 데이터 형태을 가지고 올수 있다
+
+// const ab = {
+//     a:12,
+//     b:'123'
+//   }
+//
+//type abObj = typeof ab[keyof typeof ab];같이 사용하면 abObj는 값을 number | string으로 가져온다
+//type abObj = keyof typeof ab; 히면 abObj는 'a' | 'b' 으로값을 가져온다
+//ReactNode >> ReactNode >> ReactElements >> 우리가 만든 컴포넌트나 HTML태그를 JSX.IntrinsElements에 포함된다
+
+
+        </code>
+      </pre>
+    </li>
+  </ul>
 </body>
+
 </html>

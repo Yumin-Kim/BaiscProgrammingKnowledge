@@ -17,3 +17,7 @@
     router.use('/Nextjs',NextjsRouter)
     const ReduxRouter = require('./Redux');
     router.use('/Redux',ReduxRouter)
+    const webpackRouter = require('./webpack');
+    router.use('/webpack',webpackRouter)
+    const babelRouter = require('./babel');
+    router.use('/babel',babelRouter)

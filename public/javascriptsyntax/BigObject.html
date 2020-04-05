@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BigObject</title>
+    <script>
+        window.onload = () => {
+            const arr = ["data", "data1", "data2"];
+            arr.map((v) => {
+                const data = document.querySelector(`.${v}`).textContent.replace(/\n/g, "<br>")
+                document.querySelector(`.${v}`).innerHTML = data;
+            }
+            )
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="/javascriptsyntax">BigObject</a></h1>
+    <h2> 원시타입을 제외한 모든것은 객체이다 함수 배열 정규표현식등등 </h2> 
+    <h3>내가 이때까지 선언 해도던 방식은 리터럴 방식이다!!</h3>
+    <h2>Function(함수)</h2>
+    <h3 class="data">
+        자바스크립트의 함수는 객체(일급객체)이다.다른 객체와 달리 구분될  있는 특징은 호출이다
+        함수도 객체이므로 다른 값들 처럼 사용 할 수 읶다 변수나 객체 배열 등
+        함수의 정의
+        -함수 선언문
+        -함수 표현식
+        --일급객체 이므로 아래 특징 존재
+        ---무명의 리터럴로 표현이 가능하다
+        ---변수나 자료 구조(객체 , 배열)에 저장할 수 있다
+        ---함수의 파라미터로 전달 할수 있음
+        ---변환값으로 사용 할 수 있다
+        -Funtion 생성자 함수 
+        --Function 생성자 함수는 Function.prototype.constructor 프로퍼티로 접근할 수 있다.
+        <code>
+            var square = new Function('number', 'return number * number');
+            console.log(square(10)); // 100
+        </code>
+
+        
+        호이스팅
+        자바스크립트는 ES6의 let, const를 포함하여 모든 선언(var, let, const, function, function*, class)을 호이스팅(Hoisting)한다
+        함수 선언문으로 정의된 함수는 자바스크립트 엔진이 스크립트가 로딩되는 시점에 바로 초기화하고
+        이를 VO(Variable Object)에 저장된다
+        즉 함수 선언 , 초기화 , 할당이 한번에 이루어 진다
+
+        함수 선언문의 경우 와 달리 함수 표현식의 경우 함수 호이스팅이 아니라 변수 호이스팅이 발생한다
+        변수 호이스팅은 변수 생성 및 초기화와 할당이 분리되어 진행된다. 호이스팅된 변수는 undefined로 초기화 되고 실제값의 할당은 할당문에서 이루어진다.
+
+
+        일급객체
+        일급객체란 생성 대입 연산 인자 또는 반환값으로서의 전달의 프로그매밍언어의 기본적 조작을 제한 없이 사용할수있는 대상
+        <ol>
+            <li>
+                무명의 리터럴로 표현이 가능하다.
+            </li>
+            <li>
+                변수나 자료 구조(객체, 배열 등)에 저장할 수 있다.
+            </li>
+            <li>
+                함수의 매개변수에 전달할 수 있다.
+            </li>
+            <li>
+                반환값으로 사용할 수 있다.
+            </li>
+        </ol>
+
+        매개변수(parametr) 와 인수(argument)
+        매개변수는 함수 내에서 변수와 동일하게 메모리공간 확보 함수에 전달한 인수는 매개변수에 할당>> 집어 넣는걸 인수
+
+        어떤 외부 상태도 변경하지 않는 함수를 순수함수(Pure function), 외부 상태도 변경시켜는 부수 효과(side-effect)가 발생시키는 함수를 비순수 함수(Impure function)라 한다.
+
+        function square(number) {
+            return number * number;
+          }
+          
+          square.x = 10;
+          square.y = 20;
+          
+          console.log(square.x, square.y); // 10 20
+          함수또한 객체여서 가능하다!!
+
+          arguments 프로퍼티
+          arguments 객체는 함수 호출 시 전달된 인수(argument)들의 정보를 담고 있는 순회가능한(iterable) 유사 배열 객체(array-like object)이며 함수 내부에서 지역변수처럼 사용된다.
+          //argument(인자 >> 함수 호출시 파라미터에 전달되는 값을 객체안에 담을수 있다[유사배열객체(array-like object)이라고 한다])
+          function sum() {
+            var res = 0;
+            
+            for (var i = 0; i < arguments.length; i++) {
+              res += arguments[i];
+            }
+          
+            return res;
+          }
+          
+          console.log(sum());        // 0
+          console.log(sum(1, 2));    // 3
+          console.log(sum(1, 2, 3)); // 6
+
+          
+          name 프로퍼티 //함수는 객체이기에 가능하다!!
+          var namedFunc = function multiply(a, b) {
+            return a * b;
+          };
+          // 익명 함수 표현식(anonymous function expression)
+          var anonymousFunc = function(a, b) {
+            return a * b;
+          };
+          
+          console.log(namedFunc.name);     // multiply
+          console.log(anonymousFunc.name); // ''
+    </h3>   
+    <h3 class="data1"></h3>   
+    <h3 class="data2"></h3>   
+</body>
+</html>
+    

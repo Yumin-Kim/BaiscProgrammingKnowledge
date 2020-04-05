@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>webpack</title>
+    <style>
+        .class{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="/ReactCollection">webpack</a></h1>
+    <h2> webpack해보쟈!! </h2>
+    <h3>웹펙은 여러개로 나누어져 있는 파일들을 하나의 파일로 만들어주는 모듈 번들러 역할을 하고 있다</h3>
+    <p>
+        전통적으로 웹페이지에서는 페이지를 보여주기 위한 수많은 자바 스크립트를 파일을 서버에 요청한다 
+        이를 통해 웹페이지를 보여주기 위해 서버와 여러번 통신하게 되는게 비효율성을 보여줌<br>
+        또한 옛 자바스크립트는 모듈 개념이 없었기 때문에 파일이 나누어져 있어도 변수 스코프를 생각하면서 개발을 해야햇다
+        이런점을 해결 하기 위해 모듈 개념이 생겼고 지원을 안해주는 브라우저들도 있기때문에 무언가 브라우저들이 지원 할 수 있는 코드로 변환해줘야한다<br>
+        그 무언가는 webpack이라는 모듈 번들러 이고 최신 자바스크립트 문법을 최신 브라우저에서 사용할수 있게 끔 도와준다 또한 모듈 번들러들은 자바스크립트 코드들을 압축하고 최적화 할 수 있게 도와준다<br>
+    </p>
+    <p class="calss">
+        웹팩은 자바스크립트 파일 뿐만 아니라 자바스크립트가 아닌 파일들도 아닌 파일도 모듈로 관리 할 수 있음
+    </p>
+    <pre>
+        <code>
+            const path = require('path');
+
+            module.exports = {
+                entry: "./src/test.js",
+                output:{
+                    filename:"bundle.js",
+                    path:path.join(__dirname+"/build"),
+                },
+                mode:"none",
+            }
+        </code>
+        <p class="class">
+            <b>entry</b>웹팩이 빌드 할 파일을 알려주는 역할을 한다<br>
+            <b>output</b>웹팩에서 빌드완료하면 output에 명시 되어 있는 정보를 통해 빌드 파일을 생성한다<br>
+            <b>mode</b>웹펙 빌드 옵션이고 production은 최적화 되어 빌드 되어지는 특징ㅇ을 가지고 있고 development는 빠르게 빌드하는 특징,none 같은 경우는 아무 기능 없이 웹펙으로 빌드 합니다<br>
+            <b>loader</b>는 웹펙에서 js파일 아닌 다른 파일도 관리 할 수 있게 해줌
+        </p>
+        <code>
+            module : {
+                rules: {
+                    test: '가지고올 파일 정규식',
+                    use: [
+                        {
+                            loader: '사용할 로더 이름',
+                            options: { 사용할 로더 옵션 }
+                        }
+                    ]
+                }
+            }
+        </code>
+        <p class="class">
+            <b>loader</b>는 이와 같이 사용되며 loader에 추가하면 웹팩잉 이해 할 수 있게 해줌<br>
+        </p>
+        <p>다른 블로그 참조!!</p>
+        <ul>
+            <li>entry(입력될 파일),output(출력된결과를 정리할 파일)</li>
+            <li>
+                loader
+                <p>webpack이 파일을 번들링하는 도중 test의 적어둔 이름을 보고 use의 loader를 확인한다음 번들링을 하게끔 도와줌 >> 우리 가진 모듈을 최종적으로 output으로 만듬</p>
+                <p>
+                    <pre>
+                        예시
+                        <code>
+                            <!-- entry: index.js 연결 >> 현재 index.js파일임 -->
+                            
+                            import hello_word from './hello.js';
+                            import hello_word1 from './hello1.js';
+                            import css from './style.css';
+                            
+                            <!-- 
+                                npx webpack >> webpack.config.js >> index.js를 읽게 되는데 import 한것을 읽다가
+                                import css from './style.css'; 에서 확장자가 .css인 것을 기억하고 module.rules안에 있는 객체중 test적힌 확장자와 동일한 것을 확인하고 
+                                use안 loader를 실행 시키게 되고  실행된 결과값을 css라는 변수에 넣게 된다
+                             -->
+                        </code>
+                    </pre>
+                    webpack에서 loader가 가장 중요!! <br>
+                    입력한 asset(자산이면 예를 들면 css파일,jsx파일)들을 loader가 가공하여 output으로 검출 <br>
+                    주의사항 module:{ rules:[{...},{...},{ test:/\.jsx$/,use:['loader1','loader2'] }] }>> test로 이름을 검출하고 use의 로더를 실행하는데 뒤에 있는 loader파일이 먼저 실행<br>
+                </p>
+            </li>
+            <li>
+                plugin 
+                <p>
+                    loader와 비슷한 역할 즉 확장의 기능을 담당한다 >> loader가 만든 최종적인 결과물을 변형하는되 사용 >> 좀더 복합적이고 자유성 추구!!<br>
+                    webpack 대부분의 source 코드를 bunble파일로 변환<br>
+                    loader가 부족하면 plugin을 사용하여 webpack 기능을 추가한다 
+                </p>
+            </li>
+            <li>
+                npx webpack -w >> npx tsc -w 와 같은 모드가 있음
+            </li>
+        </ul>
+        <h3>babel</h3>
+        <p>React를 적용하기 위해서는 최신문법 사용하게 되는데 그것을 Babel이 도와준다</p>
+        <code>
+            npm install --save-dev @babel/core babel-loader @babel/preset-react @babel/preset-env     
+        </code>
+        설치후
+        <ul>
+            <li>
+                @babel/core 리액트는 ES6사용함으로 여러브라우저에서 사용가능 하도록 ES5문법으로 바꿔줌
+            </li>
+            <li>
+                @babel/preset-react jsx >> js로 바꿈
+            </li>
+            <li>
+                @babel/preset-env 
+                <ul>
+                    <li>
+                        es6 > es5
+                    </li>
+                    <li>
+                        es6뿐만 아니라 브라우저에 따라 알아서 컴파일 해줌
+                    </li>
+                </ul>
+                babel자체로는 아무 것도 못하지만 preset,plugin을 추가 해야한다<br>
+                만약 arrow function을 사용하고 싶다면 npm i babel/plugin-transform-arrow-functions을 설치후<br>
+                .babelrc에 plugins: ['@babel/plugin-transform-arrow-functions']사용해야한다 <br>
+                .babelrc : babel plugin들을 모아놓고 사용할 설정파일<br>
+                매번 최신 문법을 사용하려면 이렇게 plugin을 추가해야 하는 번거로움이 있다 이런 번거로움을 해소해줄 preset이 존재한다<br>
+                babel 에서는 plugin들을 포함한 번들(plugin들을 모아놓은 파일이라고 생각) 파일을 포함한 preset제공<br>
+            </li>
+            <li>
+                babel-loader
+                <ul>
+                    <li>자바스크립트 파일을 babel preset/plugin과 webpack을 사용하여 es5컴파일 해주는 plugin</li>
+                </ul>
+            </li>
+        </ul>
+    </pre>
+</body>
+</html>
