@@ -1,3 +1,3 @@
-﻿  ch04_05.c
-C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(82): warning C4716: 'infix_to_postfix': 값을 반환해야 합니다.
+﻿  queue_05.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\queue_05.c(73,10): warning C4477: 'printf' : 서식 문자열 '%2d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'Elements'입니다.
   DataStructureLecture.vcxproj -> C:\navtiveLanguage\clanguage\DataStructureLecture\Debug\DataStructureLecture.exe
