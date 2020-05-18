@@ -85,7 +85,7 @@ int main() {
 	e = create_tree('E', NULL, NULL);
 	b = create_tree('B', d, e);
 	f = create_tree('F', NULL, NULL);
-	c = create_tree('C', NULL, NULL);
+	c = create_tree('C', f, NULL);
 	root = create_tree('A', b, c);
 
 	printf("\n In-Order : ");
