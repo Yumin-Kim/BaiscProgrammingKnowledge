@@ -1,3 +1,2 @@
-﻿  9.8_tree.c
-C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\9.8_tree.c(183,39): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+﻿  heap_02.c
   DataStructureLecture.vcxproj -> C:\navtiveLanguage\clanguage\DataStructureLecture\Debug\DataStructureLecture.exe
