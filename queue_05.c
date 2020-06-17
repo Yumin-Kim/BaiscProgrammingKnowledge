@@ -89,8 +89,8 @@ void main() {
 		if (strcmp(p.name, "-1") == 0) break;
 		else {
 			printf("성별을 입력 (남자는 boy , 여자는  girl) >>");
-			scanf("%s", p.s);
-			if (strcmp(p.s, "girl") == 0) {
+			scanf("%s", &p.s);
+			if (strcmp(p.s, "f") == 0) {
 				if (is_empty(&boy)) {
 					printf("아직은 대상자가 없습니다 \n");
 					enqueue(&girl, p);
@@ -101,7 +101,7 @@ void main() {
 
 				}
 			}
-			else if (strcmp(p.s, "boy") == 0) {
+			else if (strcmp(p.s, "m") == 0) {
 				if (is_empty(&girl)) {
 					printf("아직은 대상자가 없습니다 \n");
 					enqueue(&boy, p);
