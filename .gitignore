@@ -1,0 +1,9 @@
+*.obj
+*.tlog
+*.log
+*.sln
+/Clang_DataStructure
+/ch01/Debug
+/Debug
+/.vs/
+*.vcxproj
