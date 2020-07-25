@@ -48,5 +48,34 @@
     <ClCompile Include="ch11.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch12.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch13.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch14.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch15.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TestPrint.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch16.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch17.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestPrintFunc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

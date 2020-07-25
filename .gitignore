@@ -2,8 +2,11 @@
 *.tlog
 *.log
 *.sln
+*.vcxproj
+
+##directory
 /Clang_DataStructure
 /ch01/Debug
 /Debug
 /.vs/
-*.vcxproj
+/Release

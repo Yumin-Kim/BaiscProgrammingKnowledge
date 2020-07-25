@@ -40,6 +40,7 @@ int main() {
 	int ntestMemory = 10;
 	printf("%d\n", *TestFunc());
 	//유니코드 선언하는 방식이며 2byte의 크기를 가지고 있다
+	//윈도우는 유니코드를 많이 활용하고 리눅스 계열에서는 char를 사용한다!!
 	//단어 끝나는 부분이 아니고 하나의 문자가 끝날때마다 null이 추가된다!!
 	wchar_t wcsBuffer[12] = { L"Unicode" };
 	puts(wcsBuffer);
