@@ -40,6 +40,11 @@ int __cdecl GetMax(int a , int b , int c ) {
 	if (c > nMax) nMax = c;
 	return nMax;
 }
+//밑에서 강제 형 변환 한 모습과 비교하기!!
+//int  (*이름)	(char*)
+  int TestFunc(char * nParam) {
+	return 100;
+}
 
 int main()
 {
@@ -49,6 +54,25 @@ int main()
 	void* pnData = main;
 	printf("%p\n",pnData);
 	printf("%p\n",main);
+
+	/*
+	함수에서 ()또한 연산자이며 호출 연산자라고 한다!!
+	함수형은 밑에 설명과 같다
+	반환 자료형 ( 호출 규칙 * 변수이름 ) (매개변수)
+	*/
+	TestFunc("");
+	//밑에 코드는 자료형이 맞지 않다고 경고가 뜬다!!
+	//int nData = TestFunc;
+	 
+	int nData = (int)TestFunc;
+
+	//nData를 강제로 형 변환 해서 호출하는 방법이며 int형에 포인터를 반환하고 매개변수는 char 포인터라고 형변환한후에 호출 연산자를 사용하면 된다!!
+	printf("%d\n", ( (int(*)(char*) ) nData)(""));
+
+	//일반 변수에 담아서 호출 하는 방법 또한 있다 
+	int (__cdecl * pszFuncVariable)(int , int , int ) = GetMax;
+	printf("pszFuncVariable : %d \n", pszFuncVariable(1, 2, 3));
+
 	printf("Hello");
 	return 0;
 }

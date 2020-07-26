@@ -72,6 +72,12 @@
     <ClCompile Include="ch17.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch18.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch19.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestPrintFunc.h">
