@@ -1,2 +1,0 @@
-C:\UnmanageLanguage\Clang\Clang_DataStructure\Debug\LibTest.pdb
-C:\UnmanageLanguage\Clang\Clang_DataStructure\LibTest\Debug\LibTest.pdb
