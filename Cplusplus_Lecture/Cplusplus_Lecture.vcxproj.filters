@@ -15,19 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HelloCpp.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Start.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Stack.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Queue.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Test.c">
+    <ClCompile Include="Cplusplus_Lecture.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
