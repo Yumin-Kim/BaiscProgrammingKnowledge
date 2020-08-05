@@ -41,23 +41,45 @@ class UserClass {
 public:
 	int nAge;
 	char nName[100];
+	static int nNumber;
+
 	~UserClass() {
 		cout << "=============================================" << endl;
 		cout << "Destory UserClass constructor Function (First declared Class)" << endl;
 	}
 	void Print(UserClass * userStruct) {
 		int nData = 5;
+		//nNumber = userStruct->nAge;
 		cout << "User Name" << userStruct->nName<< "User Age" << userStruct->nAge << endl;
 	}
 	//겉으로 보기에는 Class의 주소가 안넘어가는것 같지만 지역 변수를 선언하게 되면 지역 변수의 메모리 밑에 Class주소값이 들어 가는 모습을 볼 수 있다
 	//hiden Paramter라고 하며 함수 내부적으로 사용할 수 있는 this 포인터를 사용하면 더 확실히 알 수 있다
 	void Print2() {
+		//지역변수를 통해 this의 메모리주소를 디버깅 해서 볼 수 있는데 지역변수가 할당 받은 메모리 주소 4번째 밑에 this의 메모리 주소값과 this의 안에 담긴 값을 볼 수 있다
 		int nData = 5;
+		//this를 사용하면 변수의 주소값이 직힌다!!
+		//this는 자동으로 결정 되기때문에 개발자가 건드릴수 없다!!
+		//this는 const의 성질을 뛰고 있다!!그래서 강제 바꿀수도 없고 다른주소를 직접 넣을 수 없다!!(R-value)의 특징을 가지고있다
+		cout << "this Params " << this << endl;
 		cout << "User Name" << nName << "User Age" << nAge << endl;
 		cout << "User Name(this Pointer)" << this->nName << "User Age(this Pointer)" << this->nAge << endl;
 	}
-
+	/*
+		전역 변수 전역 함수로 만들어준다!!
+		Instance와는 별개로 동작을 한다
+		class안에 소속되어 있을뿐 소속만 되어 있는 의미로 Instance가 아니기 때문에 this를 사용하지 못한다!!
+		밑에 코드로 보아 this pointer를 사용할 수 없는 것을 알 수 있고 컴파일러 자체적을 오류를  보여 주고 있다
+		멤버 변수 또한 Static 함수에서 접근 할 수 없다!! >> 만약 static 멤버 변수를 public으로 선언하게 되면 그냥 전역 변수가 되는것과 동일한 의미가 된다!!
+	*/
+	static void PrintValue() {
+		cout << "Call Static Fnuction " << endl;
+		cout << "Call Static Fnuction & Access Static memeber Variable " << nNumber << endl;
+		//cout << "this" << this << endl;
+		//cout << "Call Static Fnuction & Access memeber Variable " << nAge << endl;
+	}
 };
+//Class 안에서 static 변수를 선언하게 되면 전역에 정의가 꼭 필요하다
+int UserClass::nNumber = 100;
 
 class Test {
 public :
@@ -138,10 +160,11 @@ int main(void) {
 
 	UserClass UsedUser = { 20,"New User" };
 	UserClass UsedHost = { 33 , "New Host" };
+	UsedHost.nNumber = 100;
 	UsedUser.Print(&UsedUser);
 	UsedUser.Print2();
 	UsedHost.Print2();
-
+	UsedHost.PrintValue();
 	std::cout << "Class Member" << std::endl;
 
 	Test testClass = Test(1000);
@@ -158,6 +181,7 @@ int main(void) {
 	MallocTest* n_mallocTest = new MallocTest;
 	delete n_mallocTest;
 	cout << "UserData Sizeof : "<<sizeof(USERDATA) << "UserClass  Sizeof :" << sizeof(UserClass) << endl;
+	
 	std::cout << "Constructor Class" << std::endl;
 	std::cout << "End Main function" << std::endl;
 
