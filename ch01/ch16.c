@@ -21,7 +21,7 @@ cpu의 연산과는 아무 상관이 없다!!
 
 */
 #include <stdio.h>
-#include "TestPrintFunc.h"
+//#include "TestPrintFunc.h"
 
 //매크로 , __inline은 콜스택에 채워지지 않는다!! 컴파일러가 알아서 시도한다!!
 //#define ADD(a,b)	(a+b)
@@ -36,12 +36,17 @@ __inline int ADD(int a, int b) {
 
 
 int main(void) {
+	Testfunc(100);
+	//TestFunc_New(1000);
+/*
 #ifdef _TEST_
 	Testfunc(100);
 	TestFunc_New(1000);
+	
 #else
 	TestPrintFunc(10);
 #endif
 	printf("매크로 함수 사용 %d", ADD(10, 20));
 	return 0;
+	*/
 }
