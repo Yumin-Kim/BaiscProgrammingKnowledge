@@ -36,8 +36,8 @@ private :
 };
 class CMyDataEx : public CMyData
 {
-
 public:
+	//생성자 상속!!
 	using CMyData::CMyData;
 	CMyDataEx()
 	{
