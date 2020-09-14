@@ -20,7 +20,7 @@ void get_heght(node *head);
 
 int main() {
 
-
+    printf("Hello");
 
     return 0;
 }
