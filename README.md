@@ -2,6 +2,7 @@
 # OS 기본 구조 
 ![OS기본 구조](https://i.imgur.com/a5Eedfm.png)
 * 출처 - (https://i.imgur.com/a5Eedfm.png)
+    * * *
     * Context Switching     
         멀티 프로세스 환경에서 CPU가 어떤 하나의 프로세스를 실행하고 있는 상태에서 인터럽트 요청에 의해 다음 우선 순위의 프로세스가 실행되어야 할때 기존의 프로세스의 상태 또는 레지스터값(Context)을 저장하고  CPU가 다음 프로세스를 수행하도록 새로운 프로게그의 상태 또는 레지스터 값(Context)를 교체하는 작벙르 Context Switching라고 한다.     
         Context Switching을 진행 할 시 해당 CPU에서는 아무런 일을 하지 못하며 Context Switching이 자주 발생하게 되면 오히려 오버헤드가 발생한다.     
@@ -46,6 +47,15 @@
             5. 활용 예 : 데이터 베이스 
             6. 공유 메모리 모델의 구현 IPC     
             ![공유 메모리(IPC)](http://postfiles11.naver.net/MjAxNzA0MTdfMTUx/MDAxNDkyNDM1NjQxMzY4.-klYLOIPb--eitK8y2LVnP28CLMG32b-HPuZa0NF6hQg.H_ULo6VW2fmQlyUbBMbKmURL37_Ofd4B0VEvmTjjVd8g.PNG.bycho211/image.png?type=w773)
+            7. 버퍼(Buffer)    
+                협력적인 프로세스의 예로 , 생산자 - 소비자 문제를 들 수 있다.    
+                생산자 - 소비자 문제에 대한 하나의 해셜책은 공유메모리를 사용하는 것이며 이떄 생산자가 정를 채워 넣을 수 있고 소비자가 정보를 소모할 수 있는 버퍼(Buffer)가 반그시 사용 가능해야한다.
+                * 버퍼 크기 별로 분류
+                | 명칭 | 저장가능 메시지 크키 및 갯수 | 설명 |
+                | --- | --- | --- |
+                | `Zero capacity` | 0개 | `no buffering` 송신자는 수신자가 메시지를 받을 떄 까지 대기해야한다 |
+                | `bounded capacity(유한 버퍼)` | n개 | `automatic buffering` 버퍼가 가득하 있지 않을때에는 송신자는 메시지를 보내고 대기할 필요가 없으며 , 버퍼가 가득차 있을 경우 송신자는 버퍼에 빈공간이 갱길떄 까지 대기해야한다. |
+                | `unbounded capacity(무한 버퍼)` |  무한개 | `automatic buffering` 버퍼가 가득 찰 일이 없기 떄문에 , 모든 경우에 송신자는 대기할 필요가 없다. | 
         2. 메시지 전달(Message Passing) Model
 
 ## Linux Kenrel Module Program
