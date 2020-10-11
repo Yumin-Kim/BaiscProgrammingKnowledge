@@ -49,8 +49,8 @@
             ![공유 메모리(IPC)](http://postfiles11.naver.net/MjAxNzA0MTdfMTUx/MDAxNDkyNDM1NjQxMzY4.-klYLOIPb--eitK8y2LVnP28CLMG32b-HPuZa0NF6hQg.H_ULo6VW2fmQlyUbBMbKmURL37_Ofd4B0VEvmTjjVd8g.PNG.bycho211/image.png?type=w773)
             7. 버퍼(Buffer)    
                 협력적인 프로세스의 예로 , 생산자 - 소비자 문제를 들 수 있다.    
-                생산자 - 소비자 문제에 대한 하나의 해셜책은 공유메모리를 사용하는 것이며 이떄 생산자가 정를 채워 넣을 수 있고 소비자가 정보를 소모할 수 있는 버퍼(Buffer)가 반그시 사용 가능해야한다.
-                * 버퍼 크기 별로 분류
+                생산자 - 소비자 문제에 대한 하나의 해셜책은 공유메모리를 사용하는 것이며 이떄 생산자가 정를 채워 넣을 수 있고 소비자가 정보를 소모할 수 있는 버퍼(Buffer)가 반그시 사용 가능해야한다.    
+                버퍼 크기 별로 분류    
                 | 명칭 | 저장가능 메시지 크키 및 갯수 | 설명 |
                 | --- | --- | --- |
                 | `Zero capacity` | 0개 | `no buffering` 송신자는 수신자가 메시지를 받을 떄 까지 대기해야한다 |
