@@ -70,8 +70,14 @@
                 send 와 receive와 같은 연산에 대해서 커널이 동기화를 제공한다.     
                 send 와 receive를 수행 할때에 프로그램은 동기화에 고려 없이 사용 할 수 있다.
             5. 활용 예 : 서버와 클라이언트 방식의 통신 
-            6. 메시지 전달 모델의 구현 IPC : PIPE , Message Queue , Socket , Signal ...     
-            ![메시지 전달 모델(IPC)](http://postfiles5.naver.net/MjAxNzA0MTdfMTM1/MDAxNDkyNDM1NzYxODgx.YZv1JMBQqeHya7ifPRCG3leuKEonfCqb5lUrCQa0j_Ag.f5_-S2yyV_6Qnb6-NLPQfasnLIokHZrlIkofIsCpK08g.PNG.bycho211/image.png?type=w773)
+            6. 메시지 전달 모델의 구현 IPC : PIPE , Message Queue , Socket , Signal , RPC(Remote  Procedure Call) ...     
+                ![메시지 전달 모델(IPC)](http://postfiles5.naver.net/MjAxNzA0MTdfMTM1/MDAxNDkyNDM1NzYxODgx.YZv1JMBQqeHya7ifPRCG3leuKEonfCqb5lUrCQa0j_Ag.f5_-S2yyV_6Qnb6-NLPQfasnLIokHZrlIkofIsCpK08g.PNG.bycho211/image.png?type=w773)
+                * RPC(Remote Procedure Call)    
+                    별도의 원격제어를 위한 코딩 없이 다른 주소 공간에 함수나 프로시저를 실행 할 수 있게 하는 프로세스 간 통신 기술이다.    
+                    즉 위치에 상관없이 PRC를 통해 개발자는 위치에 상관없이 원하는 함수를 사용할 수 있습니다.    
+                    * 프로시저와 함수    
+                        프로시저와 함수의 차이는 함수의 경우 일반적으로 "인풋에 대비한 아웃풋이 발생을 목적으로" 으로 하며 , 프로시저는 결과값에 집중하기 보단 "명령 단위가 수행하는 절차"를 의미하는 것을 목적으로 한다.
+                ![메시지 전달 모델(IPC) RPC](https://blogfiles.pstatic.net/MjAyMDA1MTJfNzAg/MDAxNTg5MjcyMDgwNTM0.Wx9t_9U2cn41-8uuM20XPob5aWSVzlnhzfL1RJ1tILYg.Zh787-7l2Y7nYVYvrZrJ0LAIPST4AJn1tpdMadr1AKgg.PNG.islove8587/99D26A4E5BFF80270D.png?type=w2)
 ## Linux Kenrel Module Program
 * 기초 
     * 커널 - 운영체제의 핵심부분으로 프로세스 파일 네트워크 장치등을 관리하는 사용자에게 편리한 인터페이스를 제공해주는 시스템 소프트웨어 이다     
