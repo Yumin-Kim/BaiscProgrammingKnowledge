@@ -3,7 +3,7 @@
 ![OS기본 구조](https://i.imgur.com/a5Eedfm.png)
 * 출처 - (https://i.imgur.com/a5Eedfm.png)
     * * *
-    * Context Switching     
+    * **Context Switching**     
         멀티 프로세스 환경에서 CPU가 어떤 하나의 프로세스를 실행하고 있는 상태에서 인터럽트 요청에 의해 다음 우선 순위의 프로세스가 실행되어야 할때 기존의 프로세스의 상태 또는 레지스터값(Context)을 저장하고  CPU가 다음 프로세스를 수행하도록 새로운 프로게그의 상태 또는 레지스터 값(Context)를 교체하는 작벙르 Context Switching라고 한다.     
         Context Switching을 진행 할 시 해당 CPU에서는 아무런 일을 하지 못하며 Context Switching이 자주 발생하게 되면 오히려 오버헤드가 발생한다.     
         오버헤드는 하나의 프로세스를 해결하기 위햇 부수적인 프로세스드 , 추가 적인 연산을 진행 함으로서 하나의 프로세스에 대한 일의 지연을 발생하는것을 의미한다.
@@ -18,7 +18,7 @@
             | 레지스터 | 누산기 , 스택 , 색인 레지스터 |
             | 프로세스 번호 | pid |
   * * *
-    * IPC(InterProcess Control)     
+    * **IPC(InterProcess Control)**     
         1. 프로세스간 통신이란?     
             프로세스들 간 데이터 및 정보를 주고 받기 위한 메커니즘을 말한다.(메커니즘이란 사물의 동작 하기 위한 원리)       
             커널에서 IPC를 위한 도구를 제공하며 시스템 콜의 형태로 프로세스에게 제공된다.
@@ -30,7 +30,7 @@
             2. 협력적인 프로세스(Cooperatice Process)
                 시스템에서 실행 중인 다른 프로세스들게게 영향을 주거나 받는 프로세스                
     * 프로세스 간 통신에는 크게 두가지 모델 존재
-        1. 공유 메모리(Shared Memory) Model
+        1. **공유 메모리(Shared Memory) Model**
             1. 정의    
                 두 개 이상의 프로세스들이 주소 공간의 공유함 ㅡ 공유한 메모리 영역에 읽기 / 쓰기를 통해서 통신을 수행한다.(Read and Write)진행     
                 공유 메모리가 설정되면 그 이후의 통신을 커널의 관여없이 진행 가능하다.
@@ -45,7 +45,7 @@
                 커널이 동기화를 제공하지 않으며 부가적인 방법이 필요하다.    
                 접근 제어 방식은 locking이나 semaphore(세마포어)가 있다.
             5. 활용 예 : 데이터 베이스 
-            6. 공유 메모리 모델의 구현 IPC     
+            6. 공유 메모리 모델의 구현 IPC : 공유 메모리     
             ![공유 메모리(IPC)](http://postfiles11.naver.net/MjAxNzA0MTdfMTUx/MDAxNDkyNDM1NjQxMzY4.-klYLOIPb--eitK8y2LVnP28CLMG32b-HPuZa0NF6hQg.H_ULo6VW2fmQlyUbBMbKmURL37_Ofd4B0VEvmTjjVd8g.PNG.bycho211/image.png?type=w773)
             7. 버퍼(Buffer)    
                 협력적인 프로세스의 예로 , 생산자 - 소비자 문제를 들 수 있다.    
@@ -56,8 +56,22 @@
                 | `Zero capacity` | 0개 | `no buffering` 송신자는 수신자가 메시지를 받을 떄 까지 대기해야한다 |
                 | `bounded capacity(유한 버퍼)` | n개 | `automatic buffering` 버퍼가 가득하 있지 않을때에는 송신자는 메시지를 보내고 대기할 필요가 없으며 , 버퍼가 가득차 있을 경우 송신자는 버퍼에 빈공간이 갱길떄 까지 대기해야한다. |
                 | `unbounded capacity(무한 버퍼)` |  무한개 | `automatic buffering` 버퍼가 가득 찰 일이 없기 떄문에 , 모든 경우에 송신자는 대기할 필요가 없다. | 
-        2. 메시지 전달(Message Passing) Model
-
+        2. **메시지 전달(Message Passing) Model**
+            1. 정의    
+                커널을 경우하여 고정 길이 메시지 , 가변 길이 메시지를 송/수신자끼리 주고 받으며 커널에서는 데이터를 버퍼링한다.(Send and Receive)    
+                프로세스 간 메모리 공유 없이 동작이 가능하다.
+            2. 장 / 단점    
+                - 장점 : 구현하기에 간단하여 사용하기 편리하다.
+                - 단점 : 커넣을 경유하므로 , 속도가 느리다.
+            3. 컨텍스트 스위칭 관점     
+                메시지 전달 모겔에서의 IPC는 해당 프로세스 입장에서 일종의 입출력(I/O)로 볼 수 있다.즉 Context Switching이 자주 발생한다.    
+                - ex) Send하고 상대발이 받을 때까지 기다려야 하며 , 이 떄 컨텍스트 스위칭이 발생한다. 마찬가지로 Receive 하면 상대방이 보낼때까지 기다려야 하며 또한 컨텍스트 스위칭이 발생한다.
+            4. 동기화 관점     
+                send 와 receive와 같은 연산에 대해서 커널이 동기화를 제공한다.     
+                send 와 receive를 수행 할때에 프로그램은 동기화에 고려 없이 사용 할 수 있다.
+            5. 활용 예 : 서버와 클라이언트 방식의 통신 
+            6. 메시지 전달 모델의 구현 IPC : PIPE , Message Queue , Socket , Signal ...     
+            ![메시지 전달 모델(IPC)](http://postfiles5.naver.net/MjAxNzA0MTdfMTM1/MDAxNDkyNDM1NzYxODgx.YZv1JMBQqeHya7ifPRCG3leuKEonfCqb5lUrCQa0j_Ag.f5_-S2yyV_6Qnb6-NLPQfasnLIokHZrlIkofIsCpK08g.PNG.bycho211/image.png?type=w773)
 ## Linux Kenrel Module Program
 * 기초 
     * 커널 - 운영체제의 핵심부분으로 프로세스 파일 네트워크 장치등을 관리하는 사용자에게 편리한 인터페이스를 제공해주는 시스템 소프트웨어 이다     
