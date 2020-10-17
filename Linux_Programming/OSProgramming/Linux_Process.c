@@ -9,6 +9,7 @@ int main()
 	//Create New Process
 	pid = fork();
 
+		printf("pid : %d\n",pid);
 	if(pid < 0)
 	{
 		fprintf(stderr,"Fork Faild");
@@ -16,10 +17,13 @@ int main()
 	}
 	else if(pid == 0)
 	{
+		printf("pid : %d\n",pid);
 		execlp("/bin/ls","ls",NULL);
 	}
 	else
 	{
+		printf("Parent Proces\n:");
+		printf("pid : %d\n",pid);
 		wait(NULL);
 		printf("Child Complete\n");
 	}
