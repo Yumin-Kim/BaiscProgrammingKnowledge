@@ -1,4 +1,3 @@
-# 라즈베리파이3를 통해 배우는 Linux 공부!!
 # OS 기본 구조 
 ![OS기본 구조](https://i.imgur.com/a5Eedfm.png)
 * 출처 - (https://i.imgur.com/a5Eedfm.png)
