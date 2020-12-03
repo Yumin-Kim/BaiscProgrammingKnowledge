@@ -231,3 +231,7 @@ while(true);
 *  base 와 limit register cpu(프로그램코드)로 부터 나온 주소가 올바른지 검사하는데 사용
 	* base(기준) 메모리는 기준 메모리로 물리 메모리 주소의 값을 저장
 	* limit(상한) 메모리로 주어진 영역의 크기를 저장한다.
+* segementation
+	* 의미있는 영역 별로 영역을 구분하여 프로세스 배치 >> external Fragmentation 발생
+* Paging 
+	* 한정된 값을 통해 영역을 구분하여 프로세스의 메모리 배치 >> internal Fragmentation 발생
