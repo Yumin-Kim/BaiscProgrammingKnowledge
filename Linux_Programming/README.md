@@ -235,3 +235,14 @@ while(true);
 	* 의미있는 영역 별로 영역을 구분하여 프로세스 배치 >> external Fragmentation 발생
 * Paging 
 	* 한정된 값을 통해 영역을 구분하여 프로세스의 메모리 배치 >> internal Fragmentation 발생
+## 10장 가상 메모리
+* 9장에 페이징 기법 이나 segementation 와 같은 기법들은 swapping을 기반으로 한 기법들이다.
+* 프로세스 전체를 메모리에 적재한 다음 다른 프로세스가 적재될시 전체를 메모리에서 교체하는 방식으로 진행 하였다.
+* virtual memory는 프로그램 일부분만 적재하며 나머지 부분은 disk에 나둔다. 이로인한 장점은 cpu의 성능 개선 및 프로세스 교체를 위한 비용측면에서 효율적인 모습을 보여준다.   
+    virtual memory space를 실제 메모리 공간으로 생각하고 실제 메모리에 해당하는 페이지가 없으면 물리 메모리를 가지고 오는 방식이다.
+    * 프로세스를 요구하는 방식
+    * Demand paging : page를 요구하며 해당 페이지 전달 하는 방식으로 disk i/o를 주의해야하며 주로 사용되는 방식이다
+        * pager를 통해 swapping에서 swap in / swap out 동일하게 동작한다.
+        * 
+    * Demand segment :  segment[의미 있는 영역별 의미] 단위로 전달된다. 
+    
