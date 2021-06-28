@@ -1,0 +1,115 @@
+﻿  5_9_programing_assignment.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9_programing_assignment.c(47,43): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9_programing_assignment.c(59,20): warning C4133: '=': 'Node *'과(와) 'LinkendNode *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9_programing_assignment.c(74,27): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9_programing_assignment.c(97,43): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9_programing_assignment.c(106,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9_programing_assignment.c(107,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  5_9.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9.c(46,40): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9.c(58,17): warning C4133: '=': 'Node *'과(와) 'LinkendNode *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9.c(73,21): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9.c(96,40): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9.c(105,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_9.c(106,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  array_pointer.c
+  assignment_lecture.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(30,40): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(42,17): warning C4133: '=': 'Node *'과(와) 'LinkendNode *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(57,21): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(80,40): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(97,42): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(101,12): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\assignment_lecture.c(90,3): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  assignmet.c
+  ch03_03.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_03.c(21,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_03.c(28,8): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ch03_04.c
+  ch03_05.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_05.c(27,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_05.c(32,3): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ch03_06.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_06.c(49,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_06.c(52,3): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch03_06.c(100,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ch04_01.c
+  ch04_02.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_02.c(63,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_02.c(64,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ch04_03.c
+  ch04_05.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(56,14): warning C4013: 'isDigit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(67,27): warning C4013: 'getStackPriority'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(67,54): warning C4013: 'getPriority'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(147,12): warning C4244: '함수': 'double'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(153,30): warning C4244: '함수': 'double'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(154,30): warning C4244: '함수': 'double'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(155,30): warning C4244: '함수': 'double'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(156,30): warning C4244: '함수': 'double'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ch04_05.c(169,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  5_8.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_8.c(38,40): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_8.c(50,17): warning C4133: '=': 'Node *'과(와) 'LinkendNode *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_8.c(65,21): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\5_8.c(88,40): warning C4133: '=': 'LinkendNode *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+  list_02.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_02.c(20,6): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  list_04.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_04.c(120,10): warning C4477: 'printf' : 서식 문자열 '%2d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'Elements'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_04.c(156,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_04.c(164,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_04.c(169,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_04.c(176,9): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\list_04.c(184,9): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  rotation_01.c
+  rotation_02.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\rotation_02.c(8,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  struct_pointer.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\struct_pointer.c(29,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\struct_pointer.c(30,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ex0323.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\ex0323.c(32,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  컴파일하고 있습니다...
+  lecture.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\lecture.c(29,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  pointer.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(11,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(13,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(15,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(24,13): warning C4047: '=': 'int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(33,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(35,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(36,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(37,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int **'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(45,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(46,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(47,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int (*)[10]'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(48,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int (*)[10]'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(49,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int (*)[10]'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(50,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int (*)[10]'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(51,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int (**)[10]'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(54,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int (*)[10]'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(58,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(59,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\pointer.c(7,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'char [2]'과(와) 다릅니다.
+  queue_05.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\queue_05.c(73,10): warning C4477: 'printf' : 서식 문자열 '%2d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'Elements'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\queue_05.c(88,3): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\queue_05.c(92,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  struct1.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\struct1.c(21,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'ProductInfo'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\struct1.c(45,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'ProductInfo *'입니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\struct1.c(46,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'ProductInfo *'입니다.
+  tutorialProblem.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(74,12): warning C4244: '함수': 'double'에서 'Elements'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(80,30): warning C4244: '함수': 'double'에서 'Elements'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(81,30): warning C4244: '함수': 'double'에서 'Elements'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(82,30): warning C4244: '함수': 'double'에서 'Elements'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(83,30): warning C4244: '함수': 'double'에서 'Elements'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(151,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorialProblem.c(148,15): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  tutorial_problem_02.c
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorial_problem_02.c(30,8): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorial_problem_02.c(100,15): warning C4013: 'tolower'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\navtiveLanguage\clanguage\DataStructureLecture\DataStructureLecture\tutorial_problem_02.c(93,11): warning C4101: 'chs' :참조되지 않은 지역 변수입니다.
