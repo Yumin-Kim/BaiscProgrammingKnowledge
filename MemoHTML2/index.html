@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>RESTful SERVER</title>
+    <style>
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        .link{
+            color: red;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+
+            function getlist(data){
+                const xhr = new XMLHttpRequest();
+                xhr.open('post','/');
+                xhr.setRequestHeader('Content-Type', 'application/json' );
+                xhr.send(data);
+                xhr.addEventListener('load',()=>{
+                    const { mkdir , result } = JSON.parse(xhr.responseText)
+                    if(mkdir){
+                        document.querySelector('.result').textContent=result    
+                    }else{
+                        const listBox =  document.querySelector('.category');
+                        listBox.innerHTML = '';
+                        for( let i = 0 ; i < result.length -1 ; i++ ){
+                            if( i % 2 === 0){
+                            let li = document.createElement('li');
+                            listBox.append(li);
+                                li.innerHTML = `<a class="link" href="${result[i]}">${result[i+1]}</a>`;
+                            }
+                        }
+                    }
+                    forms.elements[0].value = '';
+                    forms.elements[1].value = '';
+                });
+            }
+
+            getlist('');
+            
+            const forms =document.querySelector('form'); 
+            forms.elements[2].addEventListener('click',(e)=>{
+                const data = {
+                    title:forms.elements[0].value,
+                    description:forms.elements[1].value
+                }
+                const dataString = JSON.stringify(data);
+                e.preventDefault();
+                getlist(dataString);
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <h2>Router Tutorial</h2>
+        <!-- <ul>
+            <li>
+                <a href="/main">Main</a>
+            </li>
+            <li>
+                <a href="/join">Join</a>
+            </li>
+            <li>
+                <a href="/sign">sign</a>
+            </li>
+            <li>
+                <a href="/update">update</a>
+            </li>
+            <li>
+                <a href="/react">React공부</a>
+            </li>
+        </ul> -->
+        <h2>생성하신 카테고리</h2>
+        <ul class="category" >
+        </ul>
+    </nav>
+    <h2>카테고리및 해당 폴더 생성 만들기 </h2>
+    <div>
+        <form>
+            <p>
+                폴더명 : <input type="text" id="username" name="title" placeholder="폴더명">
+            </p>
+            <P>   
+                카테고리 명 : <input type="text" name="description" placeholder="간단한 내용을 적어주세요"/>
+            </P>
+            <button type="submit">등록</button>
+        </form>
+        <div class="result" style="color: red;font-weight: 900; font-size: 20px; " > </div>
+    </div>
+    <h2>메모장 대용</h2>
+    <ul style="border: 3px solid orange;">
+        <li>
+            C언어 관련된 프로그램 만들어 보기 (하드웨어 직접적인 연관있는 >> 게임X)
+        </li>
+        <li>
+            통신 관련된 프로그램 C언어로  프로그램 구현
+        </li>
+        <li>
+            컴퓨터 공학 책 정독!!
+        </li>
+    </ul>
+</body>
+
+</html>

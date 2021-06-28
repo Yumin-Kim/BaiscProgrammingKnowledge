@@ -1,0 +1,1 @@
+nodeStandardBulidInObject,node내장객체,

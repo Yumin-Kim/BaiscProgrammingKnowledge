@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linux</title>
+    <script src="../js/ajax.js" ></script>
+</head>
+<body>
+    <h1><a href="/">Linux</a></h1>
+    <h2> Linux정리 </h2> 
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+        <p>
+        Sub Category : <input type="text" placeholder="title" name="subcategory"  >
+        </p>
+        <p>
+        Sub Description : <input type="text" placeholder="description" name="subdescription" >
+        </p>
+        <p>
+            <input type="submit" >
+        </p>
+    </form>
+    <ul class="subCategory">
+    </ul>
+    <ul>
+        <li>
+            <h2>Linux 특징</h2>
+            <ol>
+                <li>다중 사용 시스템 >> 리눅스는 누구든지 자유롭게 프로그램을 변경하여 유통시킬 수 있는 프리웨어입니다.  </li>
+                <li>커널을 비롯하여 대부분의 응용 프로그램의 소스코드가 공개된 시스템</li>
+                <li>다양한 네트워크 프로토콜 및 환경 지원</li>
+                <li>리눅스는 약간의 어셉브리어 언어와 대부분의 C로 작성되어 뛰어난 이식성을 보유</li>
+                <li>유연성과 확장성</li>
+                <li>
+                    뛰어난 안정성과 보안성
+                    <p>많은 사람들이 참여하고 발전시킨 결과다</p>
+                </li>
+                <li>
+                    다양한 응용 프로그램의 제공
+                </li>
+                <li>
+                    다양한 배포판의 존재 >> 우분투,레드햇,데비안 등등
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3>리눅스는 리눅스 커널 + 쉘 + 컴파일러 + 다양한 소프트웨어</h3>
+            <ol>
+                <h4>Linux 구조도</h4>
+                <img src="https://www.fun-coding.org/00_Images/os_arch_ring.png" alt="Linux structure">
+                <li>
+                    운영체제가 시스템 자원을 관리,다양한 소프트워어는 리눅스 커널이 제공하는 시스템 콜을 통해 시스템 자원을 사용을 요청
+                </li>
+                <li>
+                    시스템 콜은 쉘(기초적으로 세팅된 쉘은 : bash),다양한 언어별 컴파일러,라이브러리를 통해 호출하게됨
+                </li>
+                <li>
+                    리눅스 커널은 시스템 자원을 관리
+                    <ul>
+                        <li>프로세스 관리</li>
+                        <li>메모리 관리</li>
+                        <li>파일 시스템 관리</li>
+                        <li>디바이스 관리</li>
+                        <li>네트워크 관리</li>
+                    </ul>
+                </li>
+                <li>
+                    <img style="vertical-align: top;" src="https://www.fun-coding.org/00_Images/os_arch.png" alt="">
+                </li>
+            </ol>
+            <li>
+                <h4>shell 기능,종류</h4>
+                <ul>
+                    <li>
+                        쉘은
+                        <p>운영체제 커널과 사용자 사이를 이어주는 역할</p>
+                        <p>사용자의 명령을 해석하고,커널에 명령을 요청해주는 역할</p>
+                    </li>
+                </ul>
+            </li>
+        </li>
+        <li>
+            <h2>Shell Vs kernel</h2>
+            명령어를 shell(bash,zsh >> 명령어를 입력하여 해석해주는 프로그램)에게 입력후 커널을 통해 명령어에 대한 결과 값을 다시 쉘에세 알려준다 
+        </li>
+        <li>
+            <h2>리눅스 프로세스</h2>
+            <p>리눅스 프로세스</p>
+            <ul>
+                <li>
+                   <p>프로세스는 실행중인 프로그램을 의미</p>
+                   <p>프로세스는 메모리에 적재된 코드(바이너리) 이미지와 가상화된 메모리(가상 메모리)의 인스턴스, 열린 파일 같은 커널 리소스, 관련된 사용자 정보와 같은 보안 정보, 하나 이상의 스레드를 포함</p>
+                   <p>리눅스는 기본적으로 다양한 프로세스가 실행됨</p>
+                </li>
+
+            </ul>
+        </li>
+        <li>
+            <h2>리눅스 간단한 명령어 정리</h2>
+            <ol>
+                <li>
+                    <b>ls</b>현재 폴더에서 어떤 폴더,파일이 있는지 확인 할 수 있다. <b>ls -l</b> 상세한 정보를 얻고 싶을때 사용
+                </li>
+                <li>
+                    <b>pwd</b>현재 폴더가 어디에 위치하는지 알수있음 Node.js에서 Pathname과 같음
+                </li>
+                <li>
+                    <b>--help</b>기본 명령어를 사용하고 상세한 명령어를 사용하고 싶을때 사용하고 예를 들어 ls --help처럼 사용하게 되면 ls에 대한 정보를 얻을수 있다 
+                </li>
+                <li>
+                    <b>mkdir</b>폴더를 만들때 사용하며 예를 들어 mkdir 디렉토리이름 이렇게 입력하게 되면 디렉토리 생성 
+                </li>
+                <li>
+                    <b>cp</b>파일을 카피할때 사용하며 예를 들어 cp 파일이름 원하는폴더위치 >>> cp hello.txt dir1/dir2
+                </li>
+                <li>
+                    <b>touch</b>파일 생성할때 사용하며 예를 들어 touch hello.txt
+                </li>
+                <li>
+                    <b>sudo</b>UNIX계열의 특징으로 다중 사용자 시스템으로 관계없는 사람도 프로그램을 할수있다고 생각해서 sudo(super user do)라는 명령어를 만들어 관리자 모두를 따로 만들었다 
+                </li>
+                <li>
+                    <h3>nano</h3>windows 안에서는 메모장과 같은 역할이며 파일 편집기 기능을 가짐짐
+                </li>
+                <li>
+                    <h3>apt</h3>                    
+                    apt라는 package manager를 사용하여 내장되어 있는 package manager제외하고 더 많은 것들 쓸수 있게 도와줌
+                    <p>중점!! : Permission denied 으로 관리자가 아니면 접근을 막아 두기 때문에 sudo를 사용해야 한다</p>
+                    <ol>
+                        <li>
+                            <b>apt-get update</b>
+                            최신 상태 소프트웨어의 목록을 다운로드 받음 
+                        </li>
+                        <li>
+                            <b>apt-get install 원허는이름(ex)apache) </b>
+                            원하는 프로그램,서버 등등을 다운받는것
+                        </li>
+                        <li>
+                            <b>apt-get upgrade 원하는이름 </b>
+                            원하는 프로그램,서버 등등을 업그레이드 하는것
+                        </li>
+                        <li>
+                            <b>apt-get remove 원하는이름 </b>
+                            원하는 프로그램,서버 등등을 삭제 할수 있음
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <b>wget</b>
+                    뒤에 이미지 주소 복붙할 시 이미지 다운 가능 (굳이 이미지가 아니여도 됨)
+                </li>
+                <li>
+                    <b>cat</b>
+                    뒤에 파일 명을 추가 적으면 그 파일에 내용을 확인 할 수 있다
+                </li>
+                <li>
+                    <b>grep</b>
+                    grep 뒤에 원하는 단어를 입력하면 단어가 포함된 행의 정보를 쉽게 볼 수 있다
+                </li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>

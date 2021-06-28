@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascriptsyntax</title>
+    <script src="../js/ajax.js"></script>
+</head>
+
+<body>
+    <h1><a href="/">javascriptsyntax</a></h1>
+    <h2> 자바스크립트 문법 변천 </h2>
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+        <p>
+            Sub Category : <input type="text" placeholder="title" name="subcategory">
+        </p>
+        <p>
+            Sub Description : <input type="text" placeholder="description" name="subdescription">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+    <ul class="subCategory">
+    </ul>
+    <table>
+        <tbody>
+            <tr>
+                <td>버전</td>
+                <td>출시 연도</td>
+                <td>특징</td>
+            </tr>
+            <tr>
+                <td>ES1</td>
+                <td>1997</td>
+                <td>초판</td>
+            </tr>
+            <tr>
+                <td>ES2</td>
+                <td>1998</td>
+                <td>ISO/IEC 16262 국제 표준과 동일한 규격을 적용</td>
+            </tr>
+            <tr>
+                <td>ES3</td>
+                <td>1999</td>
+                <td>정규 표현식, try…catch 예외 처리</td>
+            </tr>
+            <tr>
+                <td>ES5</td>
+                <td>2009</td>
+                <td>HTML5와 함께 출현한 표준안. JSON, strict mode, 접근자 프로퍼티(getter, setter), 향상된 배열 조작 기능(forEach, map, filter, reduce, some, every)</td>
+            </tr>
+            <tr>
+                <td>ES6 (ECMAScript 2015)</td>
+                <td>2015</td>
+                <td>let, const, class, 화살표 함수, 템플릿 리터럴, 디스트럭처링 할당, spread 문법, rest 파라미터, Symbol, Promise, Map/Set, iterator/generator, module import/export</td>
+            </tr>
+            <tr>
+                <td>ES7 (ECMAScript 2016)</td>
+                <td>2016</td>
+                <td>지수(**) 연산자, Array.prototype.includes, String.prototype.includes</td>
+            </tr>
+            <tr>
+                <td>ES8 (ECMAScript 2017)</td>
+                <td>2017</td>
+                <td>async/await, Object 정적 메소드(Object.values, Object.entries, Object.getOwnPropertyDescriptors)</td>
+            </tr>
+            <tr>
+                <td>ES9 (ECMAScript 2018)</td>
+                <td>2018</td>
+                <td>Object Rest/Spread 프로퍼티</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <p>
+        2017년도에는 ES5를 대중적으로 사용되는 자바스크립트 버전입니다<br>
+        다음 버전인 ES6는 ES2015를 말하며ES7 >> ES2016 ES8 >> ES2017 년도 +1이 ES()이런식으로 작명<br>
+        ES2016(ES7)과 ES2017(ES8)은 상대적으로 큰 변화가 없습니다. <br>
+    </p>
+    <ul>
+        <h2>ES2015(ES6)</h2>
+        <h3>모르는 문법은 자세히 아는 문법은 자세히 기록안함</h3>
+        <li>
+            변수명 : cosnt let 사용
+        </li>
+        <li>
+            object의 변화
+            <p>
+                메소드를 줄여 쓸수 있다<br>
+                {이름:이름} >> 이름으로 간략하게 작성 가능<br>
+                동적 속성 생성
+                <pre>
+                    <code>  
+                        const a = "Hello";
+                        const obj = {
+                            [a + 1] : "Hello"
+                        };
+                        //console.log(obj) >> {Hello1 : "Hello"}
+                    </code>
+                </pre>
+            </p>
+        </li>
+        <li>
+            Function(함수)
+            <p>
+                arrow function과 this의 관계 >>this 가 필요할때만 사용 function(){}(bind call this 따로 공부 하기)<br>
+                function param 초기값 지정 가능 (a = "hello") => { }<br>
+                ...을 param값에 넣어 받는 인수를 한번에 가져올수 있게함<br>
+                spread<br>
+                <pre>
+                    <code>
+                        rest >> 배열로 담김
+                        var a = { a: 2 , b : 3 }
+                        var b = [1,2,3,4]
+                        function bb (...c){
+                            console.log(c)
+                        }
+                        bb(a,b); >> 배열로 묶어서 가지고옴 [{a:2,b:3},[1,2,3,4]]
+                        var a = { a: 2 , b : 3 }
+                        var b = [1,2,3,4]
+                        var c = "Helleo";
+                        (function bb ({a:d , b:e},...c){
+                            console.log(d,e)
+                            console.log(c)
+                        })(a,b,c)
+                        2 3
+                        [Array(4), "Helleo"]
+
+                        spread >> 배열을 여러 인자로 만들어줌
+                        var array = [1,2,3]
+                        var func =(x,y,z) => alert(x+y+z)
+                        func(...array)
+                        ////
+                        var array = [1,2,3]
+                        var func =(x,y,z,a,v) => alert(x+y+z+a+v)
+                        func(...array,100,90)
+                    </code>
+                </pre>
+            </p>
+        </li>
+        <li>
+            템플릿 문자열
+            ``사용하고 ${변수} 사용할 수 있고 입력한 문자열 그대로 출력 ``으로 함수 실행 가능<br>
+            const a = () => console.log("Hello") >>a``; 실행됨 
+        </li>
+        <li>
+            클래스 >> 일단 자료조사후 다시 2020 03 21
+        </li>
+    </ul>
+</body>
+
+</html>

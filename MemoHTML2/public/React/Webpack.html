@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webpack 정리</title>
+</head>
+<body>
+    <h1>
+        <a href="/react">Webpack 정리</a>   
+    </h1>
+    <ol>
+        <li>
+            <h2>왜사용하는가</h2>
+            <p>
+                여러 js 파일들을 하나로 만들때 사용함///환경 구축가능 js최신문법 사용하게 해줌
+            </p>
+        </li>
+        <li>
+            npm webpack webpack cli 설치
+        </li>
+        <li>
+            해당하는 폴더에서 webpack.config.json을 만들고 환경 구축 준비를한다
+        </li>
+        <li>
+            <h3>npm 에 install 해줌 -D는 development를 의미한다 </h3>
+            npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader @babel/plugin-proposal-class-properties
+        </li>
+        <li>
+            <p>설치후 json에서</p>
+             <textarea name="" id="" cols="30" rows="10">
+                    const path = require('path');
+
+                    modole.exports={
+                        name:'wordrelay-setting', //이름지어줌
+                        mode:'development', // 개발시 >> 배포시다른걸로 변경
+                        devtool:'eval', // 속도
+                        resolve:{
+                            extensions: [ '.js' , '.jsx' ]
+                        }, // 확장자 명을 적어주면 entry에서 확장자명을 적어줄필요없음
+                    
+                        entry:{
+                            app:[ './client' ],
+                        },//입력 할 파일 즉 합칠 파일들
+                    
+                        module:{
+                            rules:[{
+                                test:/\.jsx?/,
+                                loader:'babel-loader',
+                                options:{
+                                    presets:['@babel/preset-env','@babel/preset-react'],
+                                    plugins:['@babel/plugin-proposal-class-properties']
+                                }
+                            }]
+                        },// entry에 들어가 있는 파일을 babel로 적용 plugin들의 모음이 preset임 ?? babel 추가할때 사용
+                        output:{
+                            path:path.join(__dirname,'dist'),
+                            filename:'app.js'
+                        },// 출력  합칠파일명을 적고 어느파일에 만들것인지 적어줌
+                    };            
+             </textarea>
+        </li>
+        <li>
+            npm i -D react-hot-loader webpack-dev-ser 를 설치하여 자동적으로 webpack이 실행 되게 끔 구축 
+           <textarea name="" id="" cols="30" rows="10">
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+            import { hot } from 'react-hot-loader/root';
+            
+            import WordRelay from './WordRelay';
+            const Hot = hot(WordRelay);
+            
+            ReactDOM.render(< Hot />,document.querySelector('#root'));
+            //////////////////합쳐주는 폴더 즉 Node.js 에서의 app.js 역할하는 파일에 적용필요
+            ////////////////////////////////////////////////////////////////////////////////////////
+            module:{
+                rules:[{
+                    test:/\.jsx?/,
+                    loader:'babel-loader',
+                    options:{
+                        presets:['@babel/preset-env','@babel/preset-react'],
+                        plugins:['@babel/plugin-proposal-class-properties',
+                                 'react-hot-loader/babel',   
+                                ]
+                    }
+                }]
+            },// 추가할 요소?? babel 추가할때 사용
+            webpack.config.json에 추가 해야한다!!!!
+           </textarea>
+        </li>
+    </ul>
+</body>
+</html>
