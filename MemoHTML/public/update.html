@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Page</title>
+    <script>
+        function getUserData(){
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET' , '/update/ajax');
+            xhr.send();
+            xhr.addEventListener('load',()=>{
+                const data = JSON.parse(xhr.responseText);
+                document.querySelector('.list > .one').textContent = `name : ${data.name} `
+                document.querySelector('.list > .two').textContent = `email : ${data.email}`
+                document.querySelector('.list > .three').textContent = `password : ${data.pw}`
+            });
+        }
+        
+        window.onload = getUserData();
+    </script>
+</head>
+<body>
+    <h1>Update Page</h1>
+    <a href="/" style="text-decoration: none; font-size: 20px; font-weight: 700; " >&lt; 뒤로가기 </a>
+    <ul class="list">
+        <li class="one"></li>
+        <li class="two"></li>
+        <li class="three"></li>
+    </ul>
+    <p>
+        <textarea name="posts"  id="" cols="30" rows="10" placeholder="댓글입력하세요" ></textarea>
+    </p>
+    <p>
+        <input class="inputBox" type="submit" value="submit">
+    </p>
+    <script>
+        document.querySelector('.inputBox').addEventListener('click',()=>{
+            console.log('asd')
+            console.log(document.querySelector('textarea').value)
+        })
+    </script>
+</body>
+</html>

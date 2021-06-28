@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+
+    <h1>Login PAGE</h1>
+    <form action="/sign/signup" method="POST">
+        <p>
+            이메일 : <input type="email" name="email" placeholder="email입력" >
+        </p>
+        <p>
+            비밀번호 : <input type="password" name="password" placeholder="password 입력" >
+        </p>
+        <p>
+            <input type="submit" value="submit">
+        </p>
+        <h1 style="color: red;">
+            <%= msg %>
+        </h1>
+    </form>
+</body>
+</html>

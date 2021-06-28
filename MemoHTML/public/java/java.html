@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>java</title>
+    <script src="../js/ajax.js" ></script>
+</head>
+<body>
+    <h1><a href="/">java</a></h1>
+    <h2> java시작 </h2> 
+    <h3>세부 카테고리를 추가 해주세요!!</h3>
+    <form>
+        <p>
+        Sub Category : <input type="text" placeholder="title" name="subcategory"  >
+        </p>
+        <p>
+        Sub Description : <input type="text" placeholder="description" name="subdescription" >
+        </p>
+        <p>
+            <input type="submit" >
+        </p>
+    </form>
+    <ul class="subCategory">
+    </ul>
+
+    <h1>JAVA 메모리 구조</h1>
+    <p>메모리 구조 알아야하는 이유</p>
+    <p>
+        한정된 메모리를 효율적으로 사용하여 최고의 성능을 내기위해서!!
+    </p>
+     <ul>
+         <li>
+             자바 프로그램의 실행 구조<br>
+             <img src="https://t1.daumcdn.net/cfile/tistory/2778D947592D2E3021" alt="">
+             <p>
+            위와 같이 자바 프로그램은 운영체제러부터 메모리 할당받은 JVM의 호출에 의해 실해되기 때문에 운영체제로부터 독립적이고 JVM에 대해 종속적이다<br>
+            한번 작송된 자바 프로그램은 어떠한 운영체제에서도 동일한 결과를 가질수 있지만 JVM을 거치다 보니 일반 프로그램에 비래 속도가 느리다
+            </p>
+         </li>
+         <li>
+             JVM의 내부구조 <br>
+             <img src="https://t1.daumcdn.net/cfile/tistory/27551535592D1F5D1B" alt="">
+             <p>
+                 JVM 은 크게 Class Loader , Excution Engine , Gabage Collector ,Runtime Data Area(Memory Area)로 나누어져있다<br>
+                 JVM의 기본적인 수행과정을 살펴보면, 프로그램을 실행하게 되면 개발자에 의해 작성된 소스코드(.java)는 컴파일러(javac.exe)를 통해 JVM이 읽을 수 있도록 Byte Code(.Class)파일로 변환됩니다. 이렇게 변환 된 Byte Code파일을 JVM 내부의 Class Loader가 읽어들여 Runtime Data Area(Memory Area)에 저장하게 됩니다. 저장된 코드들을 Excution Engine이 하나의 명령어 단위로 읽어들여 프로그램을 실행하게됩니다. 그리고 사용이 끝나 더 이상 사용하지 않는 코드들을 Gabage Collector가 모아서 메모리에서 해제합니다.<br>
+                출처: https://re-build.tistory.com/2?category=705468<br>
+             </p>
+             <table style="border:2px solid #777777;">
+                 <tr>
+                     <td >Class Loader</td>
+                     <td>프로그램 실행시에 컴파일러에 의해 변환된 Byte Code(.class)를 읽어 메모리에 저장한는 역할</td>
+                 </tr>
+                 <tr>
+                     <td >Excution Engine</td>
+                     <td>Class Loader에 의해 JVM 메모리 공간에 저장된 Byte Code를 하나의 명령어 단위로 읽어 둘여 실행 하도록 한다</td>
+                 </tr>
+                 <tr>
+                     <td >Gabage Collector</td>
+                     <td>사용하지 않는 객체들을 메모리에서 해체하는 역할을 한다</td>
+                 </tr>
+                 <tr>
+                     <td >Runtime Data Area</td>
+                     <td>JVM이 프로그앰을 수행하기 위해 운영체제로부터 할당 받은 메모리 공간</td>
+                 </tr>
+             </table>
+
+             <li>
+                 JVM의 메모리 영역<br>
+                메모리 영역은 크게 Method Area , Heap , Stack , PC Register , Native Method Stack 영역으로 구분됩니다<br>
+                <img src="https://t1.daumcdn.net/cfile/tistory/21269846592E12B626" alt="">
+                <ul>
+                    <li>
+                        Method 영역
+                        <p>
+                            Method 영역은 인스턴스 생성을 위한 필요 정보(필드, 메소드, 생성자... 등)를 저장하는 공간입니다. 각 데이터는 Runtime Constant Pool이라는 것을 가지게 되는데요, 이는 각 데이터의 Reference를 가지고 있어서 실제 물리적 메모리 위치를 참조할 때 사용하게 됩니다.
+                        </p>
+                        <p>
+                            Constant Pool<br>
+                            상수 풀은 말 그대로 상수를 저장하는 공간입니다. 이외에도 필드나 메소드 등의 Reference 값들을 저장하고 있습니다. 이후, 실행 중에 중복되는 정보가 필요할 때에 기존의 정보를 사용하도록 도와줍니다.
+                        </p>
+                    </li>
+                    <li>
+                        Heap 영역
+                        <p>
+                            Heap 영역은 동적으로 생성 된 객체 또는 배열, Array 등을 저장하는 영역입니다. 메소드 영역에서 참조한 값을 바탕으로 새로운 객체를 생성 할 시에 이곳에 저장됩니다. 여기서 사용이 끝난 객체들을 Gabage Collector가 모아서 처리하게 됩니다.
+                        </p>
+                    </li>
+                    <li>
+                        Stack영역
+                        <p>
+                            프로그램 실행 중에 메서드들이 호출되게 되면, Stack 영역에 각각의 메서드를 위한 메모리가 할당 됩니다. 즉, 각 메서드는  하나씩의 Stack을 가지게 됩니다. 
+
+Stack 영역은 이 메서드들 안에서 사용되어지는 값을 저장하며, 호출된 메서드의 지역변수, 매개변수, 리턴 값 및 연산 값들을 임시로 저장하는 공간입니다. 임시 저장 공간이기 때문에 사용이 끝나면 Stack 영역에서 해제됩니다.
+                        </p>
+                    </li>
+                    <li>
+                        PC Register<br>
+                        PC Register는 현재 실행되고 있는 부분의 주소(Adress)를 가지고 있습니다. 현재 실행되고 있는 명령이 종료되면 카운트 값을 증가시켜 다음 명령을 실행하게 합니다.
+                    </li>
+                    <li>
+                        Natice Method Area<br>
+                        자바 외 언어(C, C++ 등)을 수행하기 위한 Stack 영역입니다. 프로그램 실행 도중 호출 된 메서드가 Native 방식을 사용하는 메소드 일 경우, 이 영역에 저장되어 처리됩니다.
+                    </li>
+                </ul>
+             </li>
+
+         </li>
+     </ul>
+    
+    
+</body>
+</html>

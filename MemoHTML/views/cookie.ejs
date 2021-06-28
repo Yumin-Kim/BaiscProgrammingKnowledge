@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAIN</title>
+    <script>
+        function attrAdd(obj, tag) {
+            for (let i = 0; i < Object.keys(obj).length; i++) {
+                let a = Object.keys(obj)[i];
+                let b = Object.values(obj)[i];
+                tag.setAttribute(a, b);
+            }
+        }
+        function patchData(data,httpMethod,url){
+            const xhr = new XMLHttpRequest();
+            xhr.open(httpMethod,url);
+            xhr.setRequestHeader('Content-Type','application/json');
+            xhr.send(JSON.stringify(data))
+            xhr.addEventListener('load',()=>{
+                console.log('통신 성공',xhr.responseText);
+                JSON.parse(xhr.responseText)
+                document.querySelector('.box').innerHTML=JSON.parse(xhr.responseText).result;
+                document.querySelector('.box').append(document.createElement('p').textContent=`입력한 값은 : ${JSON.parse(xhr.responseText).title}`);
+            })
+        }
+        function getData() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/main/ajax');
+            xhr.send();
+            xhr.addEventListener('load', () => {
+                const { title } = JSON.parse(xhr.responseText);
+                const createTag = document.createElement('div');
+                createTag.innerHTML = `<p class="box">${title}</p><p><input value="수정" class="click" type="submit"></p>`;
+                createTag.style.fontSize = '24px';
+                createTag.style.fontWeight = '700';
+                createTag.style.color = 'red';
+                document.querySelector('p').append(createTag);
+                const submitTag = document.querySelector('.click');
+                submitTag.addEventListener('click', () => {
+                    const box = document.querySelector('.box');
+                    const form = document.createElement('form');
+                    const input = document.createElement('input');
+                    const input1 = document.createElement('input');
+                    const attr = {
+                        placeholder: 'text',
+                        type: 'text',
+                        name: 'title'
+                    }
+                    const attr1 = {
+                        type: 'submit',
+                        value: 'submit'
+                    }
+                    form.append(input);
+                    form.append(input1);
+                    box.append(form);
+                    attrAdd(attr,input);
+                    attrAdd(attr1,input1);
+                    document.forms[0].elements[1].addEventListener('click',function(e){
+                        e.preventDefault();
+                        patchData({
+                            title:this.parentNode.title.value
+                        },'PATCH','/main/patch');
+                        form.innerHTML='';
+                    })
+                })
+            });
+        }
+        window.onload = () => {
+            getData();
+        }
+    </script>
+    <style>
+        .ejsbox{
+            color:<%= color%>;
+            background:<%= background%>;
+            font-size:<%= fontSize%>px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="/">MAIN page</a></h1>
+    <p class="ejsbox">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ratione totam sunt et dolorum cupiditate quisquam
+        explicabo sint at quos, quidem odit aliquam reiciendis fugit asperiores vel sapiente? Reiciendis, in.
+    </p>
+    <h2>사이트를 꾸미세요!!</h2>
+    <h3>Cookie 지원중!!</h3>
+    <form action="/main/cookie" method="POST">
+        <p>
+            Color :<input type="text" placeholder="color" name="color" value="#"  >
+        </p>
+        <p>
+            Background - Color :<input type="text" placeholder="background-color" name="background" value="#"  >
+        </p>
+        <p>
+            Font-Size :<input type="text" placeholder="px 입력안하셔도됩니다" name="fontSize"  >
+        </p>
+        <p>
+            <input type="submit" value="submit">
+        </p>
+    </form>
+    <ul>
+        <h2>입력한 Color,Background-Color,Font-Size</h2>
+        <li>
+             <p><%= color %></p>   
+        </li>
+        <li>
+             <p><%= background %></p>   
+        </li>
+        <li>
+             <p><%= fontSize %>px</p>   
+        </li>
+    </ul>
+</body>
+
+</html>
