@@ -1,0 +1,10 @@
+obj-m+=Hello.o  
+    
+ARCH :=arm  
+PWD := $(shell pwd)  
+    
+all:  
+        make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) ARCH=$(ARCH) modules  
+    
+clean:  
+        make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) ARCH=$(ARCH) clean 
